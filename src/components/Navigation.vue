@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar">
     <div class="container navbar-container">
-      <div class="logo">Portfolio</div>
+      <div class="logo">Sedric Gerve Kouam</div>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>

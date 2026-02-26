@@ -48,14 +48,14 @@
             <div class="info-icon">📧</div>
             <div>
               <h4>Email</h4>
-              <p><a href="mailto:kouamsedrick@gmail.com">kouamsedrick@gmail.com</a></p>
+              <p><a :href="`mailto:${contactDetails.email}`">{{ contactDetails.email }}</a></p>
             </div>
           </div>
           <div class="info-item">
             <div class="info-icon">📍</div>
             <div>
               <h4>Location</h4>
-              <p>Available for Remote Work Worldwide</p>
+              <p>{{ contactDetails.location }}</p>
             </div>
           </div>
           <div class="info-item">
@@ -63,8 +63,7 @@
             <div>
               <h4>Social</h4>
               <div class="social-links">
-                <a href="https://www.linkedin.com/in/sedrick-kouam-9237a8241" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                <a href="https://github.com/sedric-gerve" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a v-for="link in contactDetails.social" :key="link.url" :href="link.url" target="_blank" rel="noopener noreferrer">{{ link.name }}</a>
               </div>
             </div>
           </div>
@@ -84,6 +83,20 @@ export default {
         email: '',
         subject: '',
         message: ''
+      },
+      contactDetails: {
+        email: 'kouamsedrick@gmail.com',
+        location: 'Available for Remote Work Worldwide',
+        social: [
+          {
+            name: 'LinkedIn',
+            url: 'https://www.linkedin.com/in/sedrick-kouam-9237a8241'
+          },
+          {
+            name: 'GitHub',
+            url: 'https://github.com/sedric-gerve'
+          }
+        ]
       }
     }
   },

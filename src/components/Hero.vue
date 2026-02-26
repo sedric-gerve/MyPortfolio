@@ -2,8 +2,8 @@
   <section class="hero">
     <div class="container">
       <div class="hero-content">
-        <h1>Hi, I'm a Full Stack Developer</h1>
-        <p class="subtitle">TALL Stack Specialist | 6 Years of Experience</p>
+        <h1>Hi, I'm Sedric Gerve Kouam</h1>
+        <p class="subtitle">Full Stack Developer | TALL Stack Specialist | 6 Years of Experience</p>
         <div class="hero-buttons">
           <button class="btn btn-primary">Download Resume</button>
           <button class="btn btn-secondary">View My Work</button>
