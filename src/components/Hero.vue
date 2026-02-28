@@ -2,7 +2,7 @@
   <section class="hero">
     <div class="container">
       <div class="hero-content">
-        <h1>Hi, I'm Sedric Gerve Kouam</h1>
+        <h1>Sedrick Kouam – Développeur Web Full Stack</h1>
         <p class="subtitle">Full Stack Developer | TALL Stack Specialist | 6 Years of Experience</p>
         <div class="hero-buttons">
           <button class="btn btn-primary">Download Resume</button>
@@ -22,8 +22,8 @@ export default {
   setup() {
     onMounted(() => {
       setMeta({
-        title: "Sedric Gerve Kouam | Full Stack Developer Portfolio",
-        description: "Découvrez le portfolio de Sedric Gerve Kouam, développeur full stack spécialisé TALL Stack, 6 ans d'expérience, projets, compétences et contact."
+        title: "Sedrick Kouam | Portfolio Développeur Web Full Stack",
+        description: "Portfolio officiel de Sedrick Kouam, développeur web full stack. Découvrez ses projets, compétences, expériences et contactez-le directement."
       })
     })
   }
