@@ -14,8 +14,19 @@
 </template>
 
 <script>
+import { onMounted } from 'vue'
+import { setMeta } from '../meta.js'
+
 export default {
-  name: 'Hero'
+  name: 'Hero',
+  setup() {
+    onMounted(() => {
+      setMeta({
+        title: "Sedric Gerve Kouam | Full Stack Developer Portfolio",
+        description: "Découvrez le portfolio de Sedric Gerve Kouam, développeur full stack spécialisé TALL Stack, 6 ans d'expérience, projets, compétences et contact."
+      })
+    })
+  }
 }
 </script>
 
