@@ -2,7 +2,7 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-content">
-        <p>&copy; 2026 Your Name. All rights reserved.</p>
+        <p>&copy; 2026 Sedric Kouam. All rights reserved.</p>
         <div class="footer-links">
           <a href="#about">About</a>
           <a href="#projects">Projects</a>
