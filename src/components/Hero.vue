@@ -5,8 +5,8 @@
         <h1>Sedrick Kouam – Développeur Web Full Stack</h1>
         <p class="subtitle">Full Stack Developer | TALL Stack Specialist | 6 Years of Experience</p>
         <div class="hero-buttons">
-          <button class="btn btn-primary">Download Resume</button>
-          <button class="btn btn-secondary">View My Work</button>
+          <a href="/SEDRIC KOUAM.cv.pdf" download="sedric_kouam.pdf"><button class="btn btn-primary">Download Resume</button>
+          <button class="btn btn-secondary">View My Work</button></a>
         </div>
       </div>
     </div>
