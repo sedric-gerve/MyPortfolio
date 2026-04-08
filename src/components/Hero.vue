@@ -2,11 +2,11 @@
   <section class="hero">
     <div class="container">
       <div class="hero-content">
-        <h1>Sedrick Kouam – Développeur Web Full Stack</h1>
-        <p class="subtitle">Full Stack Developer | TALL Stack Specialist | 6 Years of Experience</p>
+        <h1>{{ t('heroTitle') }}</h1>
+        <p class="subtitle">{{ t('heroSubtitle') }}</p>
         <div class="hero-buttons">
-          <a href="/SEDRIC KOUAM.cv.pdf" download="sedric_kouam.pdf"><button class="btn btn-primary">Download Resume</button></a>
-          <button class="btn btn-secondary">View My Work</button>
+          <a href="/SEDRIC KOUAM.cv.pdf" download="sedric_kouam.pdf"><button class="btn btn-primary">{{ t('downloadResume') }}</button></a>
+          <button class="btn btn-secondary">{{ t('viewMyWork') }}</button>
         </div>
       </div>
     </div>
@@ -14,18 +14,32 @@
 </template>
 
 <script>
-import { onMounted } from 'vue'
+import { onMounted, inject } from 'vue'
 import { setMeta } from '../meta.js'
 
 export default {
   name: 'Hero',
   setup() {
+    const t = inject('t')
+    const locale = inject('locale')
+    
     onMounted(() => {
+      const titles = {
+        en: "Sedrick Kouam | Portfolio Full Stack Web Developer",
+        fr: "Sedrick Kouam | Portfolio Développeur Web Full Stack"
+      }
+      const descriptions = {
+        en: "Official portfolio of Sedrick Kouam, full stack web developer. Discover his projects, skills, experience and contact him directly.",
+        fr: "Portfolio officiel de Sedrick Kouam, développeur web full stack. Découvrez ses projets, compétences, expériences et contactez-le directement."
+      }
+      
       setMeta({
-        title: "Sedrick Kouam | Portfolio Développeur Web Full Stack",
-        description: "Portfolio officiel de Sedrick Kouam, développeur web full stack. Découvrez ses projets, compétences, expériences et contactez-le directement."
+        title: titles[locale.value] || titles.en,
+        description: descriptions[locale.value] || descriptions.en
       })
     })
+    
+    return { t }
   }
 }
 </script>

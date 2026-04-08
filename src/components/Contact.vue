@@ -1,15 +1,15 @@
 <template>
   <section id="contact" class="contact">
     <div class="container">
-      <h2>Get In Touch</h2>
-      <p class="contact-intro">Have a project in mind or just want to say hello? Feel free to reach out!</p>
+      <h2>{{ t('contactTitle') }}</h2>
+      <p class="contact-intro">{{ t('contactIntro') }}</p>
       <div class="contact-content">
         <form @submit.prevent="submitForm" class="contact-form">
           <div class="form-group">
             <input
               v-model="form.name"
               type="text"
-              placeholder="Your Name"
+              :placeholder="t('yourName')"
               required
               class="form-input"
             />
@@ -18,7 +18,7 @@
             <input
               v-model="form.email"
               type="email"
-              placeholder="Your Email"
+              :placeholder="t('yourEmail')"
               required
               class="form-input"
             />
@@ -27,7 +27,7 @@
             <input
               v-model="form.subject"
               type="text"
-              placeholder="Subject"
+              :placeholder="t('subject')"
               required
               class="form-input"
             />
@@ -35,33 +35,33 @@
           <div class="form-group">
             <textarea
               v-model="form.message"
-              placeholder="Your Message"
+              :placeholder="t('yourMessage')"
               rows="6"
               required
               class="form-input"
             ></textarea>
           </div>
-          <button type="submit" class="submit-btn">Send Message</button>
+          <button type="submit" class="submit-btn">{{ t('sendMessage') }}</button>
         </form>
         <div class="contact-info">
           <div class="info-item">
             <div class="info-icon">📧</div>
             <div>
-              <h4>Email</h4>
+              <h4>{{ t('email') }}</h4>
               <p><a :href="`mailto:${contactDetails.email}`">{{ contactDetails.email }}</a></p>
             </div>
           </div>
           <div class="info-item">
             <div class="info-icon">📍</div>
             <div>
-              <h4>Location</h4>
-              <p>{{ contactDetails.location }}</p>
+              <h4>{{ t('location') }}</h4>
+              <p>{{ t('locationValue') }}</p>
             </div>
           </div>
           <div class="info-item">
             <div class="info-icon">🔗</div>
             <div>
-              <h4>Social</h4>
+              <h4>{{ t('social') }}</h4>
               <div class="social-links">
                 <a v-for="link in contactDetails.social" :key="link.url" :href="link.url" target="_blank" rel="noopener noreferrer">{{ link.name }}</a>
               </div>
@@ -74,10 +74,14 @@
 </template>
 
 <script>
+import { inject } from 'vue'
+
 export default {
   name: 'Contact',
-  data() {
+  setup() {
+    const t = inject('t')
     return {
+      t,
       form: {
         name: '',
         email: '',
@@ -86,7 +90,6 @@ export default {
       },
       contactDetails: {
         email: 'kouamsedrick@gmail.com',
-        location: 'Available for Remote Work Worldwide',
         social: [
           {
             name: 'LinkedIn',
@@ -100,11 +103,21 @@ export default {
       }
     }
   },
+  data() {
+    return {
+      form: {
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+      }
+    }
+  },
   methods: {
     submitForm() {
       // Handle form submission
-      alert('Thank you for your message! I will get back to you soon.');
-      this.form = { name: '', email: '', subject: '', message: '' };
+      alert(this.t('thankYouMessage'))
+      this.form = { name: '', email: '', subject: '', message: '' }
     }
   }
 }

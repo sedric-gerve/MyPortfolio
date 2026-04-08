@@ -1,15 +1,15 @@
 <template>
   <section id="experience" class="experience">
     <div class="container">
-      <h2>Experience</h2>
+      <h2>{{ t('experienceTitle') }}</h2>
       <div class="timeline">
         <div v-for="job in jobs" :key="job.id" class="timeline-item">
           <div class="timeline-marker"></div>
           <div class="timeline-content">
-            <h3>{{ job.title }}</h3>
-            <p class="company">{{ job.company }}</p>
-            <p class="date">{{ job.date }}</p>
-            <p class="description">{{ job.description }}</p>
+            <h3>{{ t(job.title) }}</h3>
+            <p class="company">{{ t(job.company) }}</p>
+            <p class="date">{{ t(job.date) }}</p>
+            <p class="description">{{ t(job.description) }}</p>
           </div>
         </div>
       </div>
@@ -18,31 +18,35 @@
 </template>
 
 <script>
+import { inject } from 'vue'
+
 export default {
   name: 'Experience',
-  data() {
+  setup() {
+    const t = inject('t')
     return {
+      t,
       jobs: [
         {
           id: 1,
-          title: 'Full Stack Developer',
-          company: 'Freelance & Multiple Clients',
-          date: '2018 - Present (6+ years)',
-          description: 'Specialized in TALL stack development. Built SaaS platforms, enterprise applications, and custom web solutions using Laravel, Livewire, Alpine.js, and Tailwind CSS. Implemented MySQL databases, Docker containerization, and Git-based version control.'
+          title: 'fullStackDeveloper',
+          company: 'freelanceClients',
+          date: 'yearsExperience',
+          description: 'experienceDesc1'
         },
         {
           id: 2,
-          title: 'Notable Projects',
-          company: 'Portfolio',
-          date: '2018 - Present',
-          description: 'Developed: Gestismart.com (Business Management Solution), Optisales.logiciel.com (Sales Optimization Platform), SmartBulkMessenger.com (Messaging Service)'
+          title: 'notableProjects',
+          company: 'portfolio',
+          date: 'yearsPortfolio',
+          description: 'experienceDesc2'
         },
         {
           id: 3,
-          title: 'Technical Expertise',
-          company: 'Core Skills',
-          date: 'Throughout Career',
-          description: 'Full-stack development with TALL stack, REST API design, Database architecture with MySQL, Docker containerization, Git/GitHub version control, and clean code best practices.'
+          title: 'technicalExpertise',
+          company: 'coreSkills',
+          date: 'yearsCareer',
+          description: 'experienceDesc3'
         }
       ]
     }

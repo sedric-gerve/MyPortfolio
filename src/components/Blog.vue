@@ -1,16 +1,16 @@
 <template>
   <section id="blog" class="blog">
     <div class="container">
-      <h2>Latest Blog Posts</h2>
+      <h2>{{ t('blogTitle') }}</h2>
       <div class="blog-grid">
         <article v-for="post in posts" :key="post.id" class="blog-card">
-          <div class="blog-date">{{ post.date }}</div>
-          <h3>{{ post.title }}</h3>
-          <p class="blog-excerpt">{{ post.excerpt }}</p>
+          <div class="blog-date">{{ t(post.date) }}</div>
+          <h3>{{ t(post.title) }}</h3>
+          <p class="blog-excerpt">{{ t(post.excerpt) }}</p>
           <div class="blog-tags">
             <span v-for="tag in post.tags" :key="tag" class="blog-tag">{{ tag }}</span>
           </div>
-          <a href="#" class="read-more">Read More →</a>
+          <a href="#" class="read-more">{{ t('readMore') }}</a>
         </article>
       </div>
     </div>
@@ -18,30 +18,34 @@
 </template>
 
 <script>
+import { inject } from 'vue'
+
 export default {
   name: 'Blog',
-  data() {
+  setup() {
+    const t = inject('t')
     return {
+      t,
       posts: [
         {
           id: 1,
-          title: 'Getting Started with Vue 3 Composition API',
-          excerpt: 'Learn how to use the new Composition API in Vue 3 for more flexible component logic organization.',
-          date: 'Feb 20, 2026',
+          title: 'blogPost1Title',
+          excerpt: 'blogPost1Excerpt',
+          date: 'blogPost1Date',
           tags: ['Vue.js', 'JavaScript']
         },
         {
           id: 2,
-          title: 'Best Practices for React Performance',
-          excerpt: 'Explore techniques to optimize your React applications and improve rendering performance.',
-          date: 'Feb 15, 2026',
+          title: 'blogPost2Title',
+          excerpt: 'blogPost2Excerpt',
+          date: 'blogPost2Date',
           tags: ['React', 'Performance']
         },
         {
           id: 3,
-          title: 'Understanding Async/Await in JavaScript',
-          excerpt: 'Deep dive into asynchronous JavaScript with async/await and how to handle promises effectively.',
-          date: 'Feb 10, 2026',
+          title: 'blogPost3Title',
+          excerpt: 'blogPost3Excerpt',
+          date: 'blogPost3Date',
           tags: ['JavaScript', 'Async']
         }
       ]

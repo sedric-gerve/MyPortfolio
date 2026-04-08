@@ -1,18 +1,18 @@
 <template>
   <section id="projects" class="projects">
     <div class="container">
-      <h2>Projects</h2>
+      <h2>{{ t('projectsTitle') }}</h2>
       <div class="projects-grid">
         <div v-for="project in projects" :key="project.id" class="project-card">
           <div class="project-image">{{ project.icon }}</div>
-          <h3>{{ project.name }}</h3>
-          <p class="project-description">{{ project.description }}</p>
+          <h3>{{ t(project.name) }}</h3>
+          <p class="project-description">{{ t(project.description) }}</p>
           <div class="project-tags">
             <span v-for="tech in project.technologies" :key="tech" class="tech-tag">{{ tech }}</span>
           </div>
           <div class="project-links">
-            <a href="#" class="link">View Project</a>
-            <a href="#" class="link">GitHub</a>
+            <a href="#" class="link">{{ t('viewProject') }}</a>
+            <a href="#" class="link">{{ t('github') }}</a>
           </div>
         </div>
       </div>
@@ -21,50 +21,54 @@
 </template>
 
 <script>
+import { inject } from 'vue'
+
 export default {
   name: 'Projects',
-  data() {
+  setup() {
+    const t = inject('t')
     return {
+      t,
       projects: [
         {
           id: 1,
-          name: 'Gestismart.com',
-          description: 'Comprehensive business management solution with invoicing, inventory, and client management. Built with TALL stack for scalability and performance.',
+          name: 'gestiSmartName',
+          description: 'gestiSmartDesc',
           icon: '💼',
           technologies: ['Laravel', 'Livewire', 'Alpine.js', 'Tailwind CSS', 'MySQL', 'Docker']
         },
         {
           id: 2,
-          name: 'Optisales.logiciel.com',
-          description: 'Advanced sales optimization platform streamlining sales processes, pipeline management, and performance analytics for businesses.',
+          name: 'optiSalesName',
+          description: 'optiSalesDesc',
           icon: '📈',
           technologies: ['Laravel', 'Livewire', 'Tailwind CSS', 'MySQL', 'Git/GitHub']
         },
         {
           id: 3,
-          name: 'SmartBulkMessenger.com',
-          description: 'Intelligent bulk messaging service with campaign management, analytics, and API integration for businesses of all sizes.',
+          name: 'smartBulkName',
+          description: 'smartBulkDesc',
           icon: '💬',
           technologies: ['Laravel', 'Alpine.js', 'Tailwind CSS', 'MySQL', 'REST API', 'Docker']
         },
         {
           id: 4,
-          name: 'TALL Stack Expertise',
-          description: 'Specialized in building reactive web applications using the modern TALL stack with emphasis on performance and user experience.',
+          name: 'tallStackName',
+          description: 'tallStackDesc',
           icon: '🏗️',
           technologies: ['Tailwind CSS', 'Alpine.js', 'Livewire', 'Laravel']
         },
         {
           id: 5,
-          name: 'Database Architecture',
-          description: 'Expert in designing optimized MySQL database schemas for complex business applications and queries.',
+          name: 'databaseArchName',
+          description: 'databaseArchDesc',
           icon: '🗄️',
           technologies: ['MySQL', 'Database Design', 'Query Optimization']
         },
         {
           id: 6,
-          name: 'DevOps & Deployment',
-          description: 'End-to-end deployment expertise with Docker containerization, Git version control, and infrastructure management.',
+          name: 'devopsDeployName',
+          description: 'devopsDeployDesc',
           icon: '🚀',
           technologies: ['Docker', 'Git/GitHub', 'CI/CD', 'Linux', 'Deployment']
         }

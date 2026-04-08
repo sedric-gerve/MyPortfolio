@@ -1,21 +1,11 @@
 <template>
   <section id="about" class="about">
     <div class="container">
-      <h2>About Me</h2>
+      <h2>{{ t('aboutTitle') }}</h2>
       <div class="about-content">
         <div class="about-text">
-          <p>
-            I'm a passionate Full Stack Web Developer with 6+ years of experience building scalable web applications. 
-            I specialize in the TALL stack (Tailwind CSS, Alpine.js, Livewire, and Laravel) to create robust, 
-            efficient solutions. I combine clean code practices with exceptional user experiences to deliver 
-            high-quality web applications that solve real-world business problems.
-          </p>
-          <p>
-            Throughout my career, I've worked on diverse projects ranging from SaaS platforms to enterprise solutions. 
-            My expertise includes MySQL database design, containerization with Docker, version control with Git/GitHub, 
-            and full-stack development. I'm passionate about writing maintainable code and constantly learning new technologies 
-            to stay ahead in the rapidly evolving tech landscape.
-          </p>
+          <p>{{ t('aboutText1') }}</p>
+          <p>{{ t('aboutText2') }}</p>
         </div>
         <div class="about-image">
           <div class="placeholder-image">
@@ -32,8 +22,14 @@
 </template>
 
 <script>
+import { inject } from 'vue'
+
 export default {
-  name: 'About'
+  name: 'About',
+  setup() {
+    const t = inject('t')
+    return { t }
+  }
 }
 </script>
 

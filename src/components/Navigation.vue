@@ -3,20 +3,48 @@
     <div class="container navbar-container">
       <div class="logo">Sedric Gerve Kouam</div>
       <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#experience">Experiences</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#contact" class="cta-button">Contact</a></li>
+        <li><a href="#about">{{ t('about') }}</a></li>
+        <li><a href="#skills">{{ t('skills') }}</a></li>
+        <li><a href="#experience">{{ t('experiences') }}</a></li>
+        <li><a href="#projects">{{ t('projects') }}</a></li>
+        <li><a href="#blog">{{ t('blog') }}</a></li>
+        <li><a href="#contact" class="cta-button">{{ t('contact') }}</a></li>
+        <li class="language-switcher">
+          <button 
+            @click="toggleLanguage" 
+            :class="['lang-btn', { active: locale === 'en' }]"
+          >
+            EN
+          </button>
+          <button 
+            @click="toggleLanguage" 
+            :class="['lang-btn', { active: locale === 'fr' }]"
+          >
+            FR
+          </button>
+        </li>
       </ul>
     </div>
   </nav>
 </template>
 
 <script>
+import { inject } from 'vue'
+
 export default {
-  name: 'Navigation'
+  name: 'Navigation',
+  setup() {
+    const t = inject('t')
+    const locale = inject('locale')
+    const setLocale = inject('setLocale')
+    
+    const toggleLanguage = () => {
+      const newLocale = locale.value === 'en' ? 'fr' : 'en'
+      setLocale(newLocale)
+    }
+    
+    return { t, locale, toggleLanguage }
+  }
 }
 </script>
 
@@ -77,5 +105,34 @@ export default {
     gap: 1rem;
     font-size: 0.9rem;
   }
+}
+
+.language-switcher {
+  display: flex;
+  gap: 0.3rem;
+  margin-left: 1rem;
+}
+
+.lang-btn {
+  background-color: transparent;
+  color: var(--text-dark);
+  padding: 0.4rem 0.8rem;
+  border: 1px solid var(--text-dark);
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.lang-btn.active {
+  background-color: var(--secondary-color);
+  color: var(--white);
+  border-color: var(--secondary-color);
+}
+
+.lang-btn:hover {
+  border-color: var(--secondary-color);
+  color: var(--secondary-color);
 }
 </style>

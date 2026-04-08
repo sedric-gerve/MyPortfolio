@@ -1,12 +1,12 @@
 <template>
   <section id="skills" class="skills">
     <div class="container">
-      <h2>Skills</h2>
+      <h2>{{ t('skillsTitle') }}</h2>
       <div class="skills-grid">
         <div class="skill-card" v-for="skill in skills" :key="skill.id">
           <div class="skill-icon">{{ skill.icon }}</div>
-          <h3>{{ skill.name }}</h3>
-          <p>{{ skill.description }}</p>
+          <h3>{{ t(skill.name) }}</h3>
+          <p>{{ t(skill.description) }}</p>
           <div class="skill-tags">
             <span v-for="tag in skill.tags" :key="tag" class="tag">{{ tag }}</span>
           </div>
@@ -17,36 +17,40 @@
 </template>
 
 <script>
+import { inject } from 'vue'
+
 export default {
   name: 'Skills',
-  data() {
+  setup() {
+    const t = inject('t')
     return {
+      t,
       skills: [
         {
           id: 1,
-          name: 'Frontend Development',
-          description: 'Building responsive and interactive user interfaces',
+          name: 'frontendDevelopment',
+          description: 'frontendDescription',
           icon: '🎨',
           tags: ['Alpine.js', 'Tailwind CSS', 'JavaScript', 'Responsive Design']
         },
         {
           id: 2,
-          name: 'Backend Development',
-          description: 'Creating scalable server-side applications with Laravel',
+          name: 'backendDevelopment',
+          description: 'backendDescription',
           icon: '⚙️',
           tags: ['Laravel', 'Livewire', 'PHP', 'RESTful APIs']
         },
         {
           id: 3,
-          name: 'Database Design',
-          description: 'Designing and optimizing relational databases',
+          name: 'databaseDesign',
+          description: 'databaseDescription',
           icon: '📊',
           tags: ['MySQL', 'Database Design', 'Query Optimization']
         },
         {
           id: 4,
-          name: 'DevOps & Deployment',
-          description: 'Containerization and version control management',
+          name: 'devops',
+          description: 'devopsDescription',
           icon: '🚀',
           tags: ['Docker', 'Git/GitHub', 'Linux', 'CI/CD']
         }

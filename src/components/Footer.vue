@@ -2,12 +2,12 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-content">
-        <p>&copy; 2026 Sedric Kouam. All rights reserved.</p>
+        <p>{{ t('footerCopyright') }}</p>
         <div class="footer-links">
-          <a href="#about">About</a>
-          <a href="#projects">Projects</a>
-          <a href="#blog">Blog</a>
-          <a href="#contact">Contact</a>
+          <a href="#about">{{ t('about') }}</a>
+          <a href="#projects">{{ t('projects') }}</a>
+          <a href="#blog">{{ t('blog') }}</a>
+          <a href="#contact">{{ t('contact') }}</a>
         </div>
       </div>
     </div>
@@ -15,8 +15,14 @@
 </template>
 
 <script>
+import { inject } from 'vue'
+
 export default {
-  name: 'Footer'
+  name: 'Footer',
+  setup() {
+    const t = inject('t')
+    return { t }
+  }
 }
 </script>
 
