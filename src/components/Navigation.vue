@@ -10,14 +10,14 @@
         <li><a href="#certifications">{{ t('certifications') }}</a></li>
         <li><a href="#contact" class="cta-button">{{ t('contact') }}</a></li>
         <li class="language-switcher">
-          <button 
-            @click="toggleLanguage" 
+          <button
+            @click="setLanguage('en')"
             :class="['lang-btn', { active: locale === 'en' }]"
           >
             EN
           </button>
-          <button 
-            @click="toggleLanguage" 
+          <button
+            @click="setLanguage('fr')"
             :class="['lang-btn', { active: locale === 'fr' }]"
           >
             FR
@@ -38,12 +38,11 @@ export default {
     const locale = inject('locale')
     const setLocale = inject('setLocale')
     
-    const toggleLanguage = () => {
-      const newLocale = locale.value === 'en' ? 'fr' : 'en'
+    const setLanguage = (newLocale) => {
       setLocale(newLocale)
     }
-    
-    return { t, locale, toggleLanguage }
+
+    return { t, locale, setLanguage }
   }
 }
 </script>
