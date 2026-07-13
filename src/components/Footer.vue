@@ -6,7 +6,7 @@
         <div class="footer-links">
           <a href="#about">{{ t('about') }}</a>
           <a href="#projects">{{ t('projects') }}</a>
-          <a href="#blog">{{ t('blog') }}</a>
+          <a href="#certifications">{{ t('certifications') }}</a>
           <a href="#contact">{{ t('contact') }}</a>
         </div>
       </div>

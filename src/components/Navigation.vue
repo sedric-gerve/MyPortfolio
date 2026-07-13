@@ -7,7 +7,7 @@
         <li><a href="#skills">{{ t('skills') }}</a></li>
         <li><a href="#experience">{{ t('experiences') }}</a></li>
         <li><a href="#projects">{{ t('projects') }}</a></li>
-        <li><a href="#blog">{{ t('blog') }}</a></li>
+        <li><a href="#certifications">{{ t('certifications') }}</a></li>
         <li><a href="#contact" class="cta-button">{{ t('contact') }}</a></li>
         <li class="language-switcher">
           <button 

@@ -6,7 +6,7 @@
     <Skills />
     <Experience />
     <Projects />
-    <Blog />
+    <Certifications />
     <Contact />
     <Footer />
   </div>
@@ -20,7 +20,7 @@ import About from './components/About.vue'
 import Skills from './components/Skills.vue'
 import Experience from './components/Experience.vue'
 import Projects from './components/Projects.vue'
-import Blog from './components/Blog.vue'
+import Certifications from './components/Certifications.vue'
 import Contact from './components/Contact.vue'
 import Footer from './components/Footer.vue'
 import { useTranslations } from './i18n'
@@ -34,7 +34,7 @@ export default {
     Skills,
     Experience,
     Projects,
-    Blog,
+    Certifications,
     Contact,
     Footer
   },

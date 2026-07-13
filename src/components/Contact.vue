@@ -52,6 +52,13 @@
             </div>
           </div>
           <div class="info-item">
+            <div class="info-icon">📱</div>
+            <div>
+              <h4>{{ t('phone') }}</h4>
+              <p><a :href="`tel:${contactDetails.phone.replace(/\s/g, '')}`">{{ contactDetails.phone }}</a></p>
+            </div>
+          </div>
+          <div class="info-item">
             <div class="info-icon">📍</div>
             <div>
               <h4>{{ t('location') }}</h4>
@@ -90,6 +97,7 @@ export default {
       },
       contactDetails: {
         email: 'kouamsedrick@gmail.com',
+        phone: '(+237) 651382384',
         social: [
           {
             name: 'LinkedIn',

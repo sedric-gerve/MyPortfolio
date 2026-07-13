@@ -35,7 +35,7 @@ export default {
           name: 'gestiSmartName',
           description: 'gestiSmartDesc',
           icon: '💼',
-          technologies: ['Laravel', 'Livewire', 'Alpine.js', 'Tailwind CSS', 'MySQL', 'Docker']
+          technologies: ['Laravel', 'Livewire', 'Alpine.js', 'Tailwind CSS', 'MySQL']
         },
         {
           id: 2,
@@ -49,28 +49,7 @@ export default {
           name: 'smartBulkName',
           description: 'smartBulkDesc',
           icon: '💬',
-          technologies: ['Laravel', 'Alpine.js', 'Tailwind CSS', 'MySQL', 'REST API', 'Docker']
-        },
-        {
-          id: 4,
-          name: 'tallStackName',
-          description: 'tallStackDesc',
-          icon: '🏗️',
-          technologies: ['Tailwind CSS', 'Alpine.js', 'Livewire', 'Laravel']
-        },
-        {
-          id: 5,
-          name: 'databaseArchName',
-          description: 'databaseArchDesc',
-          icon: '🗄️',
-          technologies: ['MySQL', 'Database Design', 'Query Optimization']
-        },
-        {
-          id: 6,
-          name: 'devopsDeployName',
-          description: 'devopsDeployDesc',
-          icon: '🚀',
-          technologies: ['Docker', 'Git/GitHub', 'CI/CD', 'Linux', 'Deployment']
+          technologies: ['Laravel', 'Alpine.js', 'Tailwind CSS', 'MySQL', 'REST API', 'LLM API']
         }
       ]
     }

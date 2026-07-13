@@ -29,24 +29,24 @@ export default {
       jobs: [
         {
           id: 1,
-          title: 'fullStackDeveloper',
-          company: 'freelanceClients',
-          date: 'yearsExperience',
-          description: 'experienceDesc1'
+          title: 'job1Title',
+          company: 'job1Company',
+          date: 'job1Date',
+          description: 'job1Desc'
         },
         {
           id: 2,
-          title: 'notableProjects',
-          company: 'portfolio',
-          date: 'yearsPortfolio',
-          description: 'experienceDesc2'
+          title: 'job2Title',
+          company: 'job2Company',
+          date: 'job2Date',
+          description: 'job2Desc'
         },
         {
           id: 3,
-          title: 'technicalExpertise',
-          company: 'coreSkills',
-          date: 'yearsCareer',
-          description: 'experienceDesc3'
+          title: 'job3Title',
+          company: 'job3Company',
+          date: 'job3Date',
+          description: 'job3Desc'
         }
       ]
     }

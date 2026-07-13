@@ -3,10 +3,12 @@
     <div class="container">
       <div class="hero-content">
         <h1>{{ t('heroTitle') }}</h1>
+        <p class="role">{{ t('heroRole') }}</p>
         <p class="subtitle">{{ t('heroSubtitle') }}</p>
+        <p class="location">📍 {{ t('heroLocation') }}</p>
         <div class="hero-buttons">
-          <a href="/SEDRIC KOUAM.cv.pdf" download="sedric_kouam.pdf"><button class="btn btn-primary">{{ t('downloadResume') }}</button></a>
-          <button class="btn btn-secondary">{{ t('viewMyWork') }}</button>
+          <a href="/Sedric_Kouam_Resume.pdf" download="Sedric_Kouam_Resume.pdf"><button class="btn btn-primary">{{ t('downloadResume') }}</button></a>
+          <a href="#projects"><button class="btn btn-secondary">{{ t('viewMyWork') }}</button></a>
         </div>
       </div>
     </div>
@@ -25,12 +27,12 @@ export default {
     
     onMounted(() => {
       const titles = {
-        en: "Sedrick Kouam | Portfolio Full Stack Web Developer",
-        fr: "Sedrick Kouam | Portfolio Développeur Web Full Stack"
+        en: "Sedric Gerve Kouam | Full-Stack Developer & AI / Data Specialist",
+        fr: "Sedric Gerve Kouam | Développeur Full-Stack & Spécialiste IA / Données"
       }
       const descriptions = {
-        en: "Official portfolio of Sedrick Kouam, full stack web developer. Discover his projects, skills, experience and contact him directly.",
-        fr: "Portfolio officiel de Sedrick Kouam, développeur web full stack. Découvrez ses projets, compétences, expériences et contactez-le directement."
+        en: "Official portfolio of Sedric Gerve Kouam, full-stack web developer specialized in Data & Human-AI Interaction. Discover his projects, skills, experience, certifications and contact him directly.",
+        fr: "Portfolio officiel de Sedric Gerve Kouam, développeur web full-stack spécialisé en Données & Interaction Humain-IA. Découvrez ses projets, compétences, expériences, certifications et contactez-le directement."
       }
       
       setMeta({
@@ -60,13 +62,27 @@ export default {
 
 .hero h1 {
   color: var(--white);
-  margin-bottom: 10px;
+  margin-bottom: 6px;
+}
+
+.role {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  color: var(--white);
 }
 
 .subtitle {
-  font-size: 1.3rem;
-  margin-bottom: 2rem;
+  font-size: 1.15rem;
+  max-width: 720px;
+  margin: 0 auto 1.2rem;
   color: rgba(255, 255, 255, 0.9);
+}
+
+.location {
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .hero-buttons {
