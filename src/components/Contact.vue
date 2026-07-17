@@ -101,7 +101,7 @@ export default {
         social: [
           {
             name: 'LinkedIn',
-            url: 'https://www.linkedin.com/in/sedrick-kouam-9237a8241'
+            url: 'https://www.linkedin.com/in/sedric-kouam'
           },
           {
             name: 'GitHub',
