@@ -18,7 +18,7 @@
         <div class="about-image">
           <div class="placeholder-image">
             <img
-              src="/person_3.jpg"
+              src="/IMG_20260215_145501_378-1.jpg"
               alt="Photo de Sedric Gerve Kouam"
               style="width: 260px; height: 260px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 16px rgba(30,64,175,0.15); border: 4px solid var(--white);"
             >
