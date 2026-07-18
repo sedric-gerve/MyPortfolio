@@ -11,8 +11,8 @@
             <span v-for="tech in project.technologies" :key="tech" class="tech-tag">{{ tech }}</span>
           </div>
           <div class="project-links">
-            <a href="#" class="link">{{ t('viewProject') }}</a>
-            <a href="#" class="link">{{ t('github') }}</a>
+            <a :href="project.website" target="_blank" rel="noopener noreferrer" class="link">{{ t('viewProject') }}</a>
+            <a v-if="project.github" :href="project.github" target="_blank" rel="noopener noreferrer" class="link">{{ t('github') }}</a>
           </div>
         </div>
       </div>
@@ -35,6 +35,7 @@ export default {
           name: 'gestiSmartName',
           description: 'gestiSmartDesc',
           icon: '💼',
+          website: 'https://gestismart.com',
           technologies: ['Laravel', 'Livewire', 'Alpine.js', 'Tailwind CSS', 'MySQL']
         },
         {
@@ -42,6 +43,7 @@ export default {
           name: 'optiSalesName',
           description: 'optiSalesDesc',
           icon: '📈',
+          website: 'https://optisales.logiciel.cm',
           technologies: ['Laravel', 'Livewire', 'Tailwind CSS', 'MySQL', 'Git/GitHub']
         },
         {
@@ -49,6 +51,7 @@ export default {
           name: 'smartBulkName',
           description: 'smartBulkDesc',
           icon: '💬',
+          website: 'https://smartbulkmessenger.com',
           technologies: ['Laravel', 'Alpine.js', 'Tailwind CSS', 'MySQL', 'REST API', 'LLM API']
         }
       ]
