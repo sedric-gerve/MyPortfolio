@@ -60,7 +60,7 @@ export const translations = {
     job2Date: '2024 – 2025',
     job2Desc: 'Fully supervised the production process, ensuring compliance with quality, cost and deadline objectives. Coordinated cross-functional teams and optimized operational workflows.',
     job3Title: 'Full-Stack Web Developer',
-    job3Company: 'Klocalhost Digital',
+    job3Company: 'localhost Digital',
     job3Date: '2020 – 2024',
     job3Desc: 'Handled corrective maintenance and resolved complex technical anomalies in large-scale web systems. Executed unit and integration tests to guarantee code stability, security and reliability. Provided technical leadership, conducted code reviews and mentored a team of developers.',
 
@@ -178,7 +178,7 @@ export const translations = {
     job2Date: '2024 – 2025',
     job2Desc: "Supervision complète du processus de production, garantissant le respect des objectifs de qualité, de coût et de délai. Coordination d'équipes transversales et optimisation des flux de travail opérationnels.",
     job3Title: 'Développeur Web Full-Stack',
-    job3Company: 'Klocalhost Digital',
+    job3Company: 'localhost Digital',
     job3Date: '2020 – 2024',
     job3Desc: "Maintenance corrective et résolution d'anomalies techniques complexes dans des systèmes web à grande échelle. Exécution de tests unitaires et d'intégration pour garantir la stabilité, la sécurité et la fiabilité du code. Leadership technique, revues de code et encadrement d'une équipe de développeurs.",
 

@@ -133,95 +133,152 @@ export default {
 
 <style scoped>
 .contact {
-  background-color: var(--white);
+  background: linear-gradient(180deg, var(--bg-lighter) 0%, var(--white) 100%);
+  position: relative;
+}
+
+.contact::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--secondary-color), transparent);
+  opacity: 0.3;
 }
 
 .contact h2 {
   text-align: center;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  animation: fadeInUp 0.7s ease-out;
 }
 
 .contact-intro {
   text-align: center;
   color: var(--text-light);
-  margin-bottom: 2rem;
+  margin-bottom: 3.5rem;
   font-size: 1.1rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: fadeInUp 0.7s ease-out 0.1s both;
 }
 
 .contact-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  margin-top: 2rem;
+  gap: 4rem;
+  margin-top: 3rem;
 }
 
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.8rem;
+  animation: slideInLeft 0.8s ease-out;
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
+  gap: 0.5rem;
 }
 
 .form-input {
-  padding: 0.8rem;
-  border: 1px solid var(--bg-light);
-  border-radius: 5px;
+  padding: 1rem;
+  border: 1.5px solid var(--bg-light);
+  border-radius: 10px;
   font-family: inherit;
   font-size: 1rem;
-  transition: border-color 0.3s;
+  transition: all 0.3s ease;
+  background-color: var(--white);
+  color: var(--text-dark);
+}
+
+.form-input::placeholder {
+  color: var(--text-lighter);
 }
 
 .form-input:focus {
   outline: none;
   border-color: var(--secondary-color);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  background-color: rgba(37, 99, 235, 0.02);
+}
+
+.form-input:hover {
+  border-color: var(--secondary-color);
 }
 
 .submit-btn {
-  background-color: var(--secondary-color);
+  background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
   color: var(--white);
-  padding: 1rem;
-  border-radius: 5px;
-  font-size: 1rem;
+  padding: 1.2rem;
+  border-radius: 10px;
+  font-size: 1.05rem;
   font-weight: 600;
-  transition: background-color 0.3s;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+  cursor: pointer;
+  margin-top: 0.5rem;
 }
 
 .submit-btn:hover {
-  background-color: var(--accent-color);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
 }
 
 .contact-info {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 2.5rem;
+  animation: slideInRight 0.8s ease-out;
 }
 
 .info-item {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
+  padding: 1.8rem;
+  background: var(--white);
+  border-radius: 12px;
+  border: 1px solid var(--bg-light);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.info-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.12);
+  border-color: var(--secondary-color);
 }
 
 .info-icon {
-  font-size: 2rem;
+  font-size: 2.2rem;
+  flex-shrink: 0;
 }
 
 .info-item h4 {
   color: var(--primary-color);
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
 }
 
 .info-item p {
   color: var(--text-light);
+  font-size: 0.95rem;
+  margin: 0;
 }
 
 .info-item p a {
   color: var(--secondary-color);
-  font-weight: 500;
+  font-weight: 600;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .info-item p a:hover {
@@ -231,21 +288,133 @@ export default {
 .social-links {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.8rem;
+  margin-top: 0.5rem;
 }
 
 .social-links a {
   color: var(--secondary-color);
-  font-weight: 500;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  width: fit-content;
+}
+
+.social-links a::before {
+  content: '→';
+  opacity: 0;
+  transition: all 0.3s ease;
 }
 
 .social-links a:hover {
   color: var(--accent-color);
+  padding-left: 0.4rem;
 }
 
-@media (max-width: 768px) {
+.social-links a:hover::before {
+  opacity: 1;
+}
+
+/* Mobile Phones (320px - 480px) */
+@media (max-width: 480px) {
   .contact-content {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .contact h2 {
+    margin-bottom: 0.5rem;
+  }
+
+  .contact-intro {
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .contact-form {
+    gap: 1.2rem;
+  }
+
+  .form-input {
+    padding: 0.8rem;
+    font-size: 0.95rem;
+  }
+
+  .submit-btn {
+    padding: 1rem;
+    font-size: 0.95rem;
+  }
+
+  .info-item {
+    padding: 1.2rem;
+    gap: 1rem;
+  }
+
+  .info-icon {
+    font-size: 1.8rem;
+  }
+
+  .info-item h4 {
+    font-size: 1rem;
+  }
+
+  .info-item p {
+    font-size: 0.9rem;
+  }
+
+  .social-links {
+    gap: 0.5rem;
+  }
+
+  .contact-info {
+    gap: 1rem;
+  }
+}
+
+/* Tablets (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .contact h2 {
+    margin-bottom: 0.5rem;
+  }
+
+  .contact-intro {
+    margin-bottom: 2rem;
+    font-size: 1rem;
+  }
+
+  .contact-form {
+    gap: 1.5rem;
+  }
+
+  .info-item {
+    padding: 1.5rem;
+  }
+
+  .contact-info {
+    gap: 1.5rem;
+  }
+}
+
+/* Large Tablets (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .contact-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+}
+
+/* Large Screens (1025px+) */
+@media (min-width: 1025px) {
+  .contact-content {
+    gap: 4rem;
   }
 }
 </style>
