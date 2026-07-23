@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import { ref, provide } from 'vue'
+import { ref, provide, computed } from 'vue'
 import Navigation from './components/Navigation.vue'
 import Hero from './components/Hero.vue'
 import About from './components/About.vue'
@@ -49,11 +49,16 @@ export default {
       localStorage.setItem('locale', newLocale)
     }
     
+    // Create computed translations that react to locale changes
+    const translations = computed(() => {
+      return useTranslations(locale.value)
+    })
+    
     // Provide locale and translation function to all children
     provide('locale', locale)
+    // Translation function that always uses current locale
     provide('t', (key) => {
-      const translations = useTranslations(locale.value)
-      return translations[key] || key
+      return translations.value[key] || key
     })
     provide('setLocale', setLocale)
     
