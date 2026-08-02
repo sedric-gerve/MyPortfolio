@@ -19,8 +19,8 @@
           <div class="placeholder-image">
             <img
               src="/IMG_20260215_145501_378-1.jpg"
-              alt="Photo de Sedric Gerve Kouam"
-              style="width: 260px; height: 260px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 16px rgba(30,64,175,0.15); border: 4px solid var(--white);"
+              :alt="t('profilePhotoAlt')"
+              class="profile-photo"
             >
           </div>
         </div>
@@ -154,6 +154,17 @@ export default {
 .placeholder-image img {
   transition: transform 0.4s ease;
   box-shadow: 0 15px 40px rgba(37, 99, 235, 0.2);
+}
+
+.profile-photo {
+  width: 260px;
+  height: 260px;
+  max-width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(30, 64, 175, 0.15);
+  border: 4px solid var(--white);
 }
 
 .placeholder-image:hover img {

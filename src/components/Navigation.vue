@@ -2,13 +2,26 @@
   <nav class="navbar">
     <div class="container navbar-container">
       <div class="logo">Sedric Gerve Kouam</div>
-      <ul class="nav-links">
-        <li><a href="#about">{{ t('about') }}</a></li>
-        <li><a href="#skills">{{ t('skills') }}</a></li>
-        <li><a href="#experience">{{ t('experiences') }}</a></li>
-        <li><a href="#projects">{{ t('projects') }}</a></li>
-        <li><a href="#certifications">{{ t('certifications') }}</a></li>
-        <li><a href="#contact" class="cta-button">{{ t('contact') }}</a></li>
+
+      <button
+        class="menu-toggle"
+        :class="{ open: isMenuOpen }"
+        @click="isMenuOpen = !isMenuOpen"
+        :aria-expanded="isMenuOpen"
+        aria-label="Toggle navigation menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links" :class="{ open: isMenuOpen }">
+        <li><a href="#about" @click="closeMenu">{{ t('about') }}</a></li>
+        <li><a href="#skills" @click="closeMenu">{{ t('skills') }}</a></li>
+        <li><a href="#experience" @click="closeMenu">{{ t('experiences') }}</a></li>
+        <li><a href="#projects" @click="closeMenu">{{ t('projects') }}</a></li>
+        <li><a href="#certifications" @click="closeMenu">{{ t('certifications') }}</a></li>
+        <li><a href="#contact" class="cta-button" @click="closeMenu">{{ t('contact') }}</a></li>
         <li class="language-switcher">
           <button
             @click="setLanguage('en')"
@@ -29,7 +42,7 @@
 </template>
 
 <script>
-import { inject } from 'vue'
+import { inject, ref } from 'vue'
 
 export default {
   name: 'Navigation',
@@ -37,12 +50,17 @@ export default {
     const t = inject('t')
     const locale = inject('locale')
     const setLocale = inject('setLocale')
-    
+    const isMenuOpen = ref(false)
+
     const setLanguage = (newLocale) => {
       setLocale(newLocale)
     }
 
-    return { t, locale, setLanguage }
+    const closeMenu = () => {
+      isMenuOpen.value = false
+    }
+
+    return { t, locale, setLanguage, isMenuOpen, closeMenu }
   }
 }
 </script>
@@ -82,6 +100,39 @@ export default {
 
 .logo:hover {
   transform: scale(1.05);
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: transparent;
+  padding: 8px;
+  width: 40px;
+  height: 40px;
+  z-index: 110;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--text-dark);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.menu-toggle.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.menu-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
 }
 
 .nav-links {
@@ -138,6 +189,60 @@ export default {
   display: none;
 }
 
+/* Collapsed nav (Phones, phablets, tablets up to 1024px) */
+@media (max-width: 1024px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    background-color: var(--white);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.3s ease, opacity 0.25s ease;
+  }
+
+  .nav-links.open {
+    max-height: 500px;
+    opacity: 1;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 1rem 20px;
+    font-size: 1rem;
+  }
+
+  .nav-links a::after {
+    display: none;
+  }
+
+  .cta-button {
+    margin: 0.5rem 20px;
+    text-align: center;
+  }
+
+  .language-switcher {
+    margin: 0.5rem 20px 1rem;
+    padding-left: 0;
+    border-left: none;
+    justify-content: center;
+  }
+}
+
 /* Mobile Phones (320px - 480px) */
 @media (max-width: 480px) {
   .navbar-container {
@@ -147,37 +252,12 @@ export default {
   .logo {
     font-size: 0.95rem;
   }
-
-  .nav-links {
-    gap: 0.6rem;
-    font-size: 0.75rem;
-  }
-
-  .language-switcher {
-    margin-left: 0.5rem;
-    padding-left: 0.5rem;
-  }
-
-  .lang-btn {
-    padding: 0.3rem 0.6rem;
-    font-size: 0.7rem;
-  }
-
-  .cta-button {
-    padding: 0.5rem 1rem;
-    font-size: 0.8rem;
-  }
 }
 
 /* Tablets (481px - 768px) */
 @media (min-width: 481px) and (max-width: 768px) {
   .navbar-container {
     padding: 1rem 0;
-  }
-
-  .nav-links {
-    gap: 1.2rem;
-    font-size: 0.85rem;
   }
 
   .logo {

@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import { ref, provide, computed } from 'vue'
+import { ref, provide, computed, watchEffect } from 'vue'
 import Navigation from './components/Navigation.vue'
 import Hero from './components/Hero.vue'
 import About from './components/About.vue'
@@ -61,7 +61,11 @@ export default {
       return translations.value[key] || key
     })
     provide('setLocale', setLocale)
-    
+
+    watchEffect(() => {
+      document.documentElement.lang = locale.value
+    })
+
     return { locale, setLocale }
   }
 }

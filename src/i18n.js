@@ -27,6 +27,7 @@ export const translations = {
     factLanguagesValue: 'French (Native · TCF Québec C1 speaking) · English (Professional · IELTS B1)',
     factInterestsLabel: 'Interests',
     factInterestsValue: 'Video games, Hiking',
+    profilePhotoAlt: 'Photo of Sedric Gerve Kouam',
 
     // Skills
     skillsTitle: 'Skills',
@@ -145,6 +146,7 @@ export const translations = {
     factLanguagesValue: 'Français (Natif · TCF Québec C1 expression orale) · Anglais (Professionnel · IELTS B1)',
     factInterestsLabel: 'Centres d\'intérêt',
     factInterestsValue: 'Jeux vidéo, Randonnée',
+    profilePhotoAlt: 'Photo de Sedric Gerve Kouam',
 
     // Skills
     skillsTitle: 'Compétences',
