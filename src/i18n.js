@@ -75,6 +75,8 @@ export const translations = {
     smartBulkDesc: 'Intelligent bulk messaging service with campaign management, analytics and API integration for businesses of all sizes.',
     aiRagCrmName: 'AI RAG CRM',
     aiRagCrmDesc: 'Internal CRM/ERP application with an AI assistant that answers natural-language questions about clients, opportunities and orders through a complete RAG pipeline.',
+    aiFreelanceWatchName: 'AI Freelance Opportunity Watch',
+    aiFreelanceWatchDesc: 'Automated n8n workflow that searches for AI training and evaluation freelance missions, filters them with Gemini using Tavily results, and sends relevant opportunities by email every Monday.',
     viewProject: 'View Project',
     github: 'GitHub',
 
@@ -196,6 +198,8 @@ export const translations = {
     smartBulkDesc: "Service intelligent de messagerie en masse avec gestion de campagnes, analyses et intégration API pour les entreprises de toutes tailles.",
     aiRagCrmName: 'AI RAG CRM',
     aiRagCrmDesc: "Application CRM/ERP interne avec un assistant IA capable de répondre en langage naturel sur les clients, opportunités et commandes grâce à une architecture RAG complète.",
+    aiFreelanceWatchName: 'Veille des Missions Freelance IA',
+    aiFreelanceWatchDesc: "Workflow n8n automatisé qui recherche des missions freelance liées à l'entraînement et l'évaluation des modèles d'IA, les filtre avec Gemini à partir de résultats Tavily, puis envoie les opportunités pertinentes par email chaque lundi.",
     viewProject: 'Voir le Projet',
     github: 'GitHub',
 

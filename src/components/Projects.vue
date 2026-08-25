@@ -26,7 +26,7 @@
             <span v-for="tech in project.technologies" :key="tech" class="tech-tag">{{ tech }}</span>
           </div>
           <div class="project-links">
-            <a :href="project.website" target="_blank" rel="noopener noreferrer" class="link">{{ t('viewProject') }}</a>
+            <a v-if="project.website" :href="project.website" target="_blank" rel="noopener noreferrer" class="link">{{ t('viewProject') }}</a>
             <a v-if="project.github" :href="project.github" target="_blank" rel="noopener noreferrer" class="link">{{ t('github') }}</a>
           </div>
         </div>
@@ -82,6 +82,13 @@ export default {
             { src: '/ai-rag-crm-assistant.png', alt: 'AI RAG CRM AI assistant screen' }
           ],
           video: '/demo-video.mp4'
+        },
+        {
+          id: 5,
+          name: 'aiFreelanceWatchName',
+          description: 'aiFreelanceWatchDesc',
+          icon: '⚡',
+          technologies: ['n8n', 'Tavily API', 'Google Gemini', 'Gmail', 'AI Agents', 'Automation']
         }
       ]
     }
