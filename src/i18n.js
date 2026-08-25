@@ -73,6 +73,8 @@ export const translations = {
     optiSalesDesc: 'Advanced sales optimization platform streamlining sales processes, pipeline management and performance analytics for businesses.',
     smartBulkName: 'SmartBulkMessenger.com',
     smartBulkDesc: 'Intelligent bulk messaging service with campaign management, analytics and API integration for businesses of all sizes.',
+    aiRagCrmName: 'AI RAG CRM',
+    aiRagCrmDesc: 'Internal CRM/ERP application with an AI assistant that answers natural-language questions about clients, opportunities and orders through a complete RAG pipeline.',
     viewProject: 'View Project',
     github: 'GitHub',
 
@@ -192,6 +194,8 @@ export const translations = {
     optiSalesDesc: "Plateforme avancée d'optimisation des ventes rationalisant les processus de vente, la gestion du pipeline et l'analyse de performance pour les entreprises.",
     smartBulkName: 'SmartBulkMessenger.com',
     smartBulkDesc: "Service intelligent de messagerie en masse avec gestion de campagnes, analyses et intégration API pour les entreprises de toutes tailles.",
+    aiRagCrmName: 'AI RAG CRM',
+    aiRagCrmDesc: "Application CRM/ERP interne avec un assistant IA capable de répondre en langage naturel sur les clients, opportunités et commandes grâce à une architecture RAG complète.",
     viewProject: 'Voir le Projet',
     github: 'GitHub',
 

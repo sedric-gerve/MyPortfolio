@@ -4,7 +4,22 @@
       <h2>{{ t('projectsTitle') }}</h2>
       <div class="projects-grid">
         <div v-for="project in projects" :key="project.id" class="project-card">
-          <div class="project-image">{{ project.icon }}</div>
+          <div v-if="project.images" class="project-gallery">
+            <a
+              v-for="image in project.images"
+              :key="image.src"
+              :href="image.src"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-gallery-link"
+            >
+              <img :src="image.src" :alt="image.alt" class="project-gallery-image">
+            </a>
+          </div>
+          <div v-else class="project-image">{{ project.icon }}</div>
+          <video v-if="project.video" controls preload="metadata" class="project-video">
+            <source :src="project.video" type="video/mp4">
+          </video>
           <h3>{{ t(project.name) }}</h3>
           <p class="project-description">{{ t(project.description) }}</p>
           <div class="project-tags">
@@ -53,6 +68,20 @@ export default {
           icon: '💬',
           website: 'https://smartbulkmessenger.com',
           technologies: ['Laravel', 'Alpine.js', 'Tailwind CSS', 'MySQL', 'REST API', 'LLM API']
+        },
+        {
+          id: 4,
+          name: 'aiRagCrmName',
+          description: 'aiRagCrmDesc',
+          icon: '🤖',
+          website: 'https://ai-rag-crm.onrender.com/admin/',
+          technologies: ['Laravel', 'Filament', 'PostgreSQL', 'RAG', 'Voyage AI', 'Claude'],
+          images: [
+            { src: '/ai-rag-crm-clients.png', alt: 'AI RAG CRM client management screen' },
+            { src: '/ai-rag-crm-opportunities.png', alt: 'AI RAG CRM sales opportunities screen' },
+            { src: '/ai-rag-crm-assistant.png', alt: 'AI RAG CRM AI assistant screen' }
+          ],
+          video: '/demo-video.mp4'
         }
       ]
     }
@@ -132,6 +161,48 @@ export default {
   margin-bottom: 1.2rem;
   display: inline-block;
   transition: transform 0.3s ease;
+}
+
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  margin-bottom: 1.2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.project-gallery-link {
+  display: block;
+  overflow: hidden;
+  border: 1px solid var(--bg-light);
+  border-radius: 6px;
+  aspect-ratio: 16 / 10;
+  background: var(--bg-lighter);
+}
+
+.project-gallery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  transition: transform 0.3s ease;
+}
+
+.project-gallery-link:hover .project-gallery-image {
+  transform: scale(1.06);
+}
+
+.project-video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  display: block;
+  margin-bottom: 1.2rem;
+  border-radius: 8px;
+  background: #111827;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
 }
 
 .project-card:hover .project-image {
