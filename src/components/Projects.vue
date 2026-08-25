@@ -88,7 +88,11 @@ export default {
           name: 'aiFreelanceWatchName',
           description: 'aiFreelanceWatchDesc',
           icon: '⚡',
-          technologies: ['n8n', 'Tavily API', 'Google Gemini', 'Gmail', 'AI Agents', 'Automation']
+          technologies: ['n8n', 'Tavily API', 'Google Gemini', 'Gmail', 'AI Agents', 'Automation'],
+          images: [
+            { src: '/ai-freelance-n8n.png', alt: 'Automated AI freelance opportunity search workflow in n8n' },
+            { src: '/ai-freelance-gmail.png', alt: 'Email containing filtered AI freelance opportunities' }
+          ]
         }
       ]
     }
