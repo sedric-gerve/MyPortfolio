@@ -18,7 +18,7 @@
         <div class="about-image">
           <div class="placeholder-image">
             <img
-              src="/IMG_20260215_145501_378-1.jpg"
+              src="/sedric-pic.jpg"
               :alt="t('profilePhotoAlt')"
               class="profile-photo"
             >
