@@ -62,7 +62,7 @@ export default {
 
 <style scoped>
 .certifications {
-  background: linear-gradient(180deg, var(--bg-lighter) 0%, var(--white) 100%);
+  background: var(--primary-color);
   position: relative;
 }
 
@@ -73,7 +73,7 @@ export default {
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, var(--secondary-color), transparent);
+  background: linear-gradient(90deg, transparent, rgba(249, 115, 22, 0.4), transparent);
   opacity: 0.3;
 }
 
@@ -90,11 +90,11 @@ export default {
 }
 
 .column-title {
-  color: var(--primary-color);
+  color: var(--text-on-dark);
   font-size: 1.4rem;
   margin-bottom: 2rem;
   padding-bottom: 1rem;
-  border-bottom: 3px solid var(--secondary-color);
+  border-bottom: 3px solid var(--accent-color);
   font-weight: 700;
   position: relative;
 }
@@ -106,7 +106,7 @@ export default {
   left: 0;
   width: 40px;
   height: 3px;
-  background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
+  background: var(--accent-color);
   border-radius: 2px;
 }
 
@@ -144,7 +144,7 @@ export default {
   left: -3px;
   width: 3px;
   height: 0;
-  background: linear-gradient(180deg, var(--secondary-color), var(--accent-color));
+  background: var(--accent-color);
   transition: height 0.3s ease;
 }
 
@@ -154,7 +154,7 @@ export default {
 
 .cert-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.15);
+  box-shadow: 0 12px 30px rgba(30, 58, 138, 0.15);
   border-color: var(--secondary-color);
 }
 
@@ -192,14 +192,14 @@ export default {
   font-weight: 700;
   font-size: 0.8rem;
   white-space: nowrap;
-  background: rgba(37, 99, 235, 0.1);
+  background: rgba(30, 58, 138, 0.1);
   padding: 0.4rem 0.8rem;
   border-radius: 6px;
   transition: all 0.3s ease;
 }
 
 .cert-card:hover .cert-date {
-  background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+  background: var(--accent-color);
   color: var(--white);
 }
 

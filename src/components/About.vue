@@ -43,7 +43,7 @@ export default {
 
 <style scoped>
 .about {
-  background: linear-gradient(180deg, var(--white) 0%, var(--bg-light) 100%);
+  background: var(--primary-color);
   position: relative;
 }
 
@@ -54,7 +54,7 @@ export default {
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, var(--secondary-color), transparent);
+  background: linear-gradient(90deg, transparent, rgba(249, 115, 22, 0.4), transparent);
   opacity: 0.3;
 }
 
@@ -77,7 +77,7 @@ export default {
 
 .about-text p {
   font-size: 1.05rem;
-  color: var(--text-light);
+  color: var(--text-on-dark-muted);
   margin-bottom: 1.5rem;
   line-height: 1.9;
 }
@@ -88,7 +88,7 @@ export default {
   border-left: 5px solid var(--secondary-color);
   border-radius: 12px;
   padding: 2rem;
-  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.1);
+  box-shadow: 0 8px 25px rgba(30, 58, 138, 0.1);
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -101,14 +101,14 @@ export default {
   right: -100px;
   width: 200px;
   height: 200px;
-  background: radial-gradient(circle, rgba(37, 99, 235, 0.08) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(30, 58, 138, 0.08) 0%, transparent 70%);
   border-radius: 50%;
   pointer-events: none;
 }
 
 .quick-facts:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 35px rgba(37, 99, 235, 0.15);
+  box-shadow: 0 12px 35px rgba(30, 58, 138, 0.15);
 }
 
 .quick-facts h3 {
@@ -153,7 +153,7 @@ export default {
 
 .placeholder-image img {
   transition: transform 0.4s ease;
-  box-shadow: 0 15px 40px rgba(37, 99, 235, 0.2);
+  box-shadow: 0 15px 40px rgba(30, 58, 138, 0.2);
 }
 
 .profile-photo {

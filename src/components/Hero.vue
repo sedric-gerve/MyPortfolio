@@ -8,7 +8,7 @@
         <p class="location">📍 {{ t('heroLocation') }}</p>
         <div class="hero-buttons">
           <a href="/Sedric_Kouam_Resume.pdf" download="Sedric_Kouam_Resume.pdf"><button class="btn btn-secondary">{{ t('downloadResume') }}</button></a>
-          <a href="#projects"><button class="btn btn-secondary">{{ t('viewMyWork') }}</button></a>
+          <a href="#projects"><button class="btn btn-primary">{{ t('viewMyWork') }}</button></a>
         </div>
       </div>
     </div>
@@ -48,7 +48,7 @@ export default {
 
 <style scoped>
 .hero {
-  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  background: var(--primary-color);
   position: relative;
   overflow: hidden;
   color: var(--white);
@@ -57,30 +57,6 @@ export default {
   justify-content: center;
   min-height: 95vh;
   text-align: center;
-}
-
-.hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
-  border-radius: 50%;
-  pointer-events: none;
-}
-
-.hero::after {
-  content: '';
-  position: absolute;
-  bottom: -100px;
-  left: -100px;
-  width: 400px;
-  height: 400px;
-  background: radial-gradient(circle, rgba(122, 58, 237, 0.2) 0%, transparent 70%);
-  border-radius: 50%;
-  pointer-events: none;
 }
 
 .container {
@@ -105,11 +81,7 @@ export default {
   font-size: 1.6rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
-  color: rgba(255, 255, 255, 0.95);
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--accent-color);
 }
 
 .subtitle {
@@ -147,26 +119,27 @@ export default {
 }
 
 .btn-primary {
-  background-color: var(--white);
-  color: var(--secondary-color);
+  background-color: var(--accent-color);
+  color: var(--white);
 }
 
 .btn-primary:hover {
   transform: translateY(-4px);
-  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
-  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 10px 30px rgba(249, 115, 22, 0.4);
+  background-color: #EA580C;
 }
 
 .btn-secondary {
   background-color: transparent;
-  color: var(--white);
-  border: 2.5px solid var(--white);
+  color: var(--accent-color);
+  border: 2.5px solid var(--accent-color);
 }
 
 .btn-secondary:hover {
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: var(--accent-color);
+  color: var(--white);
   transform: translateY(-4px);
-  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 30px rgba(249, 115, 22, 0.3);
 }
 
 /* Mobile Phones (320px - 480px) */

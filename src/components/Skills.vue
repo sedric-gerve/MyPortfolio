@@ -106,7 +106,7 @@ export default {
 
 <style scoped>
 .skills {
-  background: linear-gradient(180deg, var(--white) 0%, var(--bg-light) 100%);
+  background: var(--primary-color);
   position: relative;
 }
 
@@ -117,7 +117,7 @@ export default {
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, var(--secondary-color), transparent);
+  background: linear-gradient(90deg, transparent, rgba(249, 115, 22, 0.4), transparent);
   opacity: 0.3;
 }
 
@@ -144,7 +144,7 @@ export default {
   left: 50%;
   transform: translateX(-50%);
   padding-bottom: 1rem;
-  color: var(--primary-color);
+  color: var(--text-on-dark);
   font-weight: 700;
 }
 
@@ -156,9 +156,8 @@ export default {
   transform: translateX(-50%);
   width: 60px;
   height: 4px;
-  background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
+  background: var(--text-on-dark);
   border-radius: 2px;
-  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
 }
 
 .skills-grid {
@@ -194,7 +193,7 @@ export default {
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
+  background: var(--accent-color);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease;
@@ -206,7 +205,7 @@ export default {
 
 .skill-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.15);
+  box-shadow: 0 12px 30px rgba(30, 58, 138, 0.15);
   border-color: var(--secondary-color);
 }
 
@@ -242,18 +241,18 @@ export default {
 }
 
 .tag {
-  background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(122, 58, 237, 0.1) 100%);
-  color: var(--secondary-color);
+  background: rgba(249, 115, 22, 0.1);
+  color: var(--accent-color);
   padding: 0.4rem 1rem;
   border-radius: 20px;
   font-size: 0.8rem;
   font-weight: 500;
-  border: 1px solid rgba(37, 99, 235, 0.2);
+  border: 1px solid rgba(249, 115, 22, 0.25);
   transition: all 0.3s ease;
 }
 
 .skill-card:hover .tag {
-  background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+  background: var(--accent-color);
   color: var(--white);
   border-color: transparent;
 }

@@ -67,13 +67,13 @@ export default {
 
 <style scoped>
 .navbar {
-  background-color: var(--white);
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+  background-color: var(--primary-color);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
   position: sticky;
   top: 0;
   z-index: 100;
   backdrop-filter: blur(10px);
-  background-color: rgba(255, 255, 255, 0.98);
+  background-color: rgba(10, 31, 68, 0.97);
 }
 
 .navbar-container {
@@ -90,10 +90,7 @@ export default {
 .logo {
   font-size: 1.4rem;
   font-weight: 800;
-  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--accent-color);
   letter-spacing: -0.5px;
   transition: transform 0.3s ease;
 }
@@ -118,7 +115,7 @@ export default {
   display: block;
   width: 100%;
   height: 2px;
-  background-color: var(--text-dark);
+  background-color: var(--text-on-dark);
   border-radius: 2px;
   transition: all 0.3s ease;
 }
@@ -143,7 +140,7 @@ export default {
 }
 
 .nav-links a {
-  color: var(--text-dark);
+  color: var(--text-on-dark);
   font-weight: 500;
   transition: all 0.3s ease;
   position: relative;
@@ -157,12 +154,12 @@ export default {
   left: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
+  background: var(--accent-color);
   transition: width 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: var(--secondary-color);
+  color: var(--accent-color);
 }
 
 .nav-links a:hover::after {
@@ -170,19 +167,20 @@ export default {
 }
 
 .cta-button {
-  background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
+  background: var(--accent-color);
   color: var(--white) !important;
   padding: 0.65rem 1.8rem;
   border-radius: 8px;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+  box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
   font-weight: 600;
 }
 
 .cta-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+  box-shadow: 0 8px 25px rgba(249, 115, 22, 0.4);
   color: var(--white) !important;
+  background: #EA580C;
 }
 
 .cta-button::after {
@@ -203,8 +201,8 @@ export default {
     flex-direction: column;
     align-items: stretch;
     gap: 0;
-    background-color: var(--white);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+    background-color: var(--primary-color);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
     max-height: 0;
     overflow: hidden;
     opacity: 0;
@@ -277,14 +275,14 @@ export default {
   gap: 0.4rem;
   margin-left: 1rem;
   padding-left: 1rem;
-  border-left: 2px solid var(--bg-light);
+  border-left: 2px solid rgba(255, 255, 255, 0.15);
 }
 
 .lang-btn {
   background-color: transparent;
-  color: var(--text-dark);
+  color: var(--text-on-dark);
   padding: 0.4rem 0.8rem;
-  border: 1.5px solid var(--text-light);
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
   border-radius: 6px;
   font-weight: 600;
   font-size: 0.8rem;
@@ -293,15 +291,15 @@ export default {
 }
 
 .lang-btn.active {
-  background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+  background: var(--accent-color);
   color: var(--white);
   border-color: transparent;
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+  box-shadow: 0 4px 12px rgba(249, 115, 22, 0.4);
 }
 
 .lang-btn:hover:not(.active) {
-  border-color: var(--secondary-color);
-  color: var(--secondary-color);
-  background-color: rgba(37, 99, 235, 0.05);
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+  background-color: rgba(249, 115, 22, 0.1);
 }
 </style>

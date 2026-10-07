@@ -56,7 +56,7 @@ export default {
 
 <style scoped>
 .experience {
-  background: linear-gradient(180deg, var(--white) 0%, var(--bg-light) 100%);
+  background: var(--primary-color);
   position: relative;
 }
 
@@ -67,7 +67,7 @@ export default {
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, var(--secondary-color), transparent);
+  background: linear-gradient(90deg, transparent, rgba(249, 115, 22, 0.4), transparent);
   opacity: 0.3;
 }
 
@@ -89,8 +89,8 @@ export default {
   transform: translateX(-50%);
   width: 3px;
   height: 100%;
-  background: linear-gradient(180deg, var(--secondary-color), var(--accent-color));
-  box-shadow: 0 0 20px rgba(37, 99, 235, 0.3);
+  background: var(--accent-color);
+  box-shadow: 0 0 20px rgba(249, 115, 22, 0.3);
 }
 
 .timeline-item {
@@ -123,11 +123,11 @@ export default {
   transform: translateX(-50%);
   width: 20px;
   height: 20px;
-  background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+  background: var(--accent-color);
   border: 4px solid var(--white);
   border-radius: 50%;
   z-index: 1;
-  box-shadow: 0 0 20px rgba(37, 99, 235, 0.4);
+  box-shadow: 0 0 20px rgba(249, 115, 22, 0.4);
   transition: all 0.3s ease;
 }
 
@@ -155,13 +155,13 @@ export default {
   left: -100%;
   width: 300px;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 0.1), transparent);
+  background: linear-gradient(90deg, transparent, rgba(30, 58, 138, 0.1), transparent);
   transition: left 0.5s ease;
 }
 
 .timeline-item:hover .timeline-content {
   transform: translateY(-4px);
-  box-shadow: 0 12px 35px rgba(37, 99, 235, 0.15);
+  box-shadow: 0 12px 35px rgba(30, 58, 138, 0.15);
   border-color: var(--secondary-color);
 }
 

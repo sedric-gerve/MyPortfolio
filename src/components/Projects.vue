@@ -102,7 +102,7 @@ export default {
 
 <style scoped>
 .projects {
-  background: linear-gradient(180deg, var(--bg-lighter) 0%, var(--white) 100%);
+  background: var(--primary-color);
   position: relative;
 }
 
@@ -113,7 +113,7 @@ export default {
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, var(--secondary-color), transparent);
+  background: linear-gradient(90deg, transparent, rgba(249, 115, 22, 0.4), transparent);
   opacity: 0.3;
 }
 
@@ -152,7 +152,7 @@ export default {
   left: -100%;
   width: 300px;
   height: 300px;
-  background: radial-gradient(circle, rgba(37, 99, 235, 0.15) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(30, 58, 138, 0.15) 0%, transparent 70%);
   transition: all 0.5s ease;
 }
 
@@ -163,7 +163,7 @@ export default {
 
 .project-card:hover {
   transform: translateY(-12px);
-  box-shadow: 0 15px 40px rgba(37, 99, 235, 0.15);
+  box-shadow: 0 15px 40px rgba(30, 58, 138, 0.15);
   border-color: var(--secondary-color);
 }
 
@@ -247,18 +247,18 @@ export default {
 }
 
 .tech-tag {
-  background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(122, 58, 237, 0.1) 100%);
-  color: var(--secondary-color);
+  background: rgba(249, 115, 22, 0.1);
+  color: var(--accent-color);
   padding: 0.4rem 0.9rem;
   border-radius: 18px;
   font-size: 0.8rem;
   font-weight: 500;
-  border: 1px solid rgba(37, 99, 235, 0.2);
+  border: 1px solid rgba(249, 115, 22, 0.25);
   transition: all 0.3s ease;
 }
 
 .project-card:hover .tech-tag {
-  background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+  background: var(--accent-color);
   color: var(--white);
   border-color: transparent;
 }

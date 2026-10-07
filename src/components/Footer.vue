@@ -28,7 +28,7 @@ export default {
 
 <style scoped>
 .footer {
-  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  background: var(--primary-color);
   color: var(--white);
   text-align: center;
   padding: 3.5rem 0 2rem;
@@ -44,18 +44,6 @@ export default {
   right: 0;
   height: 1px;
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-}
-
-.footer::after {
-  content: '';
-  position: absolute;
-  bottom: -100px;
-  left: -100px;
-  width: 400px;
-  height: 400px;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
-  border-radius: 50%;
-  pointer-events: none;
 }
 
 .container {
@@ -99,12 +87,12 @@ export default {
   left: 0;
   width: 0;
   height: 2px;
-  background: var(--white);
+  background: var(--accent-color);
   transition: width 0.3s ease;
 }
 
 .footer-links a:hover {
-  color: var(--white);
+  color: var(--accent-color);
 }
 
 .footer-links a:hover::after {

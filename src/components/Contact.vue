@@ -133,7 +133,7 @@ export default {
 
 <style scoped>
 .contact {
-  background: linear-gradient(180deg, var(--bg-lighter) 0%, var(--white) 100%);
+  background: var(--primary-color);
   position: relative;
 }
 
@@ -144,7 +144,7 @@ export default {
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, var(--secondary-color), transparent);
+  background: linear-gradient(90deg, transparent, rgba(249, 115, 22, 0.4), transparent);
   opacity: 0.3;
 }
 
@@ -156,7 +156,7 @@ export default {
 
 .contact-intro {
   text-align: center;
-  color: var(--text-light);
+  color: var(--text-on-dark-muted);
   margin-bottom: 3.5rem;
   font-size: 1.1rem;
   max-width: 800px;
@@ -203,8 +203,8 @@ export default {
 .form-input:focus {
   outline: none;
   border-color: var(--secondary-color);
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
-  background-color: rgba(37, 99, 235, 0.02);
+  box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1);
+  background-color: rgba(30, 58, 138, 0.02);
 }
 
 .form-input:hover {
@@ -212,21 +212,22 @@ export default {
 }
 
 .submit-btn {
-  background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
+  background: var(--accent-color);
   color: var(--white);
   padding: 1.2rem;
   border-radius: 10px;
   font-size: 1.05rem;
   font-weight: 600;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+  box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
   cursor: pointer;
   margin-top: 0.5rem;
 }
 
 .submit-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+  box-shadow: 0 8px 25px rgba(249, 115, 22, 0.4);
+  background: #EA580C;
 }
 
 .submit-btn:active {
@@ -253,7 +254,7 @@ export default {
 
 .info-item:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.12);
+  box-shadow: 0 8px 25px rgba(30, 58, 138, 0.12);
   border-color: var(--secondary-color);
 }
 
