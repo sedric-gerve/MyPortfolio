@@ -15,6 +15,10 @@ export const translations = {
     heroLocation: 'Douala, Cameroon · Available for Remote Work Worldwide',
     downloadResume: 'Download Resume',
     viewMyWork: 'View My Work',
+    servicesLabel: 'I offer:',
+    service1: 'Website Creation',
+    service2: 'Web App Development',
+    service3: 'Automation',
 
     // About
     aboutTitle: 'About Me',
@@ -138,6 +142,10 @@ export const translations = {
     heroLocation: 'Douala, Cameroun · Disponible pour le télétravail à l\'international',
     downloadResume: 'Télécharger le CV',
     viewMyWork: 'Voir mon travail',
+    servicesLabel: 'Je propose :',
+    service1: 'Création de sites web',
+    service2: "Création d'applications web",
+    service3: 'Automatisation',
 
     // About
     aboutTitle: 'À Propos de Moi',

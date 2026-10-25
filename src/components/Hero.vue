@@ -4,6 +4,12 @@
       <div class="hero-content">
         <h1>{{ t('heroTitle') }}</h1>
         <p class="role">{{ t('heroRole') }}</p>
+        <div class="services-rotator">
+          <span class="services-label">{{ t('servicesLabel') }}</span>
+          <Transition name="fade" mode="out-in">
+            <span :key="currentService" class="service-text">{{ currentService }}</span>
+          </Transition>
+        </div>
         <p class="subtitle">{{ t('heroSubtitle') }}</p>
         <p class="location">📍 {{ t('heroLocation') }}</p>
         <div class="hero-buttons">
@@ -16,7 +22,7 @@
 </template>
 
 <script>
-import { onMounted, inject } from 'vue'
+import { onMounted, onUnmounted, inject, ref, computed } from 'vue'
 import { setMeta } from '../meta.js'
 
 export default {
@@ -24,7 +30,12 @@ export default {
   setup() {
     const t = inject('t')
     const locale = inject('locale')
-    
+
+    const serviceKeys = ['service1', 'service2', 'service3']
+    const serviceIndex = ref(0)
+    const currentService = computed(() => t(serviceKeys[serviceIndex.value]))
+    let serviceTimer = null
+
     onMounted(() => {
       const titles = {
         en: "Sedric Gerve Kouam | Full-Stack Developer & AI / Data Specialist",
@@ -39,9 +50,17 @@ export default {
         title: titles[locale.value] || titles.en,
         description: descriptions[locale.value] || descriptions.en
       })
+
+      serviceTimer = setInterval(() => {
+        serviceIndex.value = (serviceIndex.value + 1) % serviceKeys.length
+      }, 2000)
     })
-    
-    return { t }
+
+    onUnmounted(() => {
+      if (serviceTimer) clearInterval(serviceTimer)
+    })
+
+    return { t, currentService }
   }
 }
 </script>
@@ -82,6 +101,41 @@ export default {
   font-weight: 700;
   margin-bottom: 1.5rem;
   color: var(--accent-color);
+}
+
+.services-rotator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.15rem;
+  flex-wrap: wrap;
+}
+
+.services-label {
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 500;
+}
+
+.service-text {
+  display: inline-block;
+  color: var(--white);
+  font-weight: 700;
+  background-color: rgba(249, 115, 22, 0.15);
+  border: 1.5px solid var(--accent-color);
+  padding: 0.3rem 1rem;
+  border-radius: 20px;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.4s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 
 .subtitle {
@@ -156,6 +210,15 @@ export default {
   .role {
     font-size: 1rem;
     margin-bottom: 0.8rem;
+  }
+
+  .services-rotator {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+
+  .service-text {
+    padding: 0.25rem 0.8rem;
   }
 
   .subtitle {
