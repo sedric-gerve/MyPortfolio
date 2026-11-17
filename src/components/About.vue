@@ -1,7 +1,10 @@
 <template>
   <section id="about" class="about">
     <div class="container">
-      <h2>{{ t('aboutTitle') }}</h2>
+      <div class="section-head">
+        <h2>{{ t('aboutTitle') }}</h2>
+        <span class="rule"></span>
+      </div>
       <div class="about-content">
         <div class="about-text">
           <p>{{ t('aboutText1') }}</p>
@@ -58,21 +61,11 @@ export default {
   opacity: 0.3;
 }
 
-.about h2 {
-  text-align: center;
-  margin-bottom: 4rem;
-  animation: fadeInUp 0.7s ease-out;
-}
-
 .about-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
-  align-items: center;
-}
-
-.about-text {
-  animation: slideInLeft 0.8s ease-out;
+  align-items: start;
 }
 
 .about-text p {
@@ -84,40 +77,19 @@ export default {
 
 .quick-facts {
   margin-top: 2rem;
-  background: var(--white);
-  border-left: 5px solid var(--secondary-color);
-  border-radius: 12px;
-  padding: 2rem;
-  box-shadow: 0 8px 25px rgba(30, 58, 138, 0.1);
-  transition: all 0.3s ease;
+  background: var(--paper);
+  border: 1px solid var(--line-on-paper);
+  border-radius: 4px;
+  padding: 1.8rem 2rem;
   position: relative;
-  overflow: hidden;
-}
-
-.quick-facts::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: -100px;
-  width: 200px;
-  height: 200px;
-  background: radial-gradient(circle, rgba(30, 58, 138, 0.08) 0%, transparent 70%);
-  border-radius: 50%;
-  pointer-events: none;
-}
-
-.quick-facts:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 35px rgba(30, 58, 138, 0.15);
 }
 
 .quick-facts h3 {
-  color: var(--primary-color);
-  font-size: 1.2rem;
+  font-family: var(--font-display);
+  color: var(--ink-on-paper);
+  font-size: 1.05rem;
   margin-bottom: 1.2rem;
-  font-weight: 700;
-  position: relative;
-  z-index: 1;
+  font-weight: 600;
 }
 
 .quick-facts ul {
@@ -125,8 +97,6 @@ export default {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  position: relative;
-  z-index: 1;
 }
 
 .quick-facts li {
@@ -138,22 +108,16 @@ export default {
 .fact-label {
   display: block;
   color: var(--secondary-color);
-  font-weight: 700;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  margin-bottom: 0.3rem;
+  font-weight: 600;
+  font-size: 0.8rem;
+  margin-bottom: 0.2rem;
 }
 
 .placeholder-image {
-  animation: slideInRight 0.8s ease-out;
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-.placeholder-image img {
-  transition: transform 0.4s ease;
-  box-shadow: 0 15px 40px rgba(30, 58, 138, 0.2);
+  border: 1px solid var(--line-on-ink);
+  border-radius: 4px;
+  padding: 10px;
+  width: fit-content;
 }
 
 .profile-photo {
@@ -162,13 +126,8 @@ export default {
   max-width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(30, 64, 175, 0.15);
-  border: 4px solid var(--white);
-}
-
-.placeholder-image:hover img {
-  transform: scale(1.05);
+  border-radius: 2px;
+  display: block;
 }
 
 /* Mobile Phones (320px - 480px) */
@@ -176,10 +135,6 @@ export default {
   .about-content {
     grid-template-columns: 1fr;
     gap: 1.5rem;
-  }
-
-  .about h2 {
-    margin-bottom: 2rem;
   }
 
   .about-text p {
@@ -211,10 +166,6 @@ export default {
   .about-content {
     grid-template-columns: 1fr;
     gap: 2rem;
-  }
-
-  .about h2 {
-    margin-bottom: 2.5rem;
   }
 
   .quick-facts {

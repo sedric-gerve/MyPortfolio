@@ -22,6 +22,15 @@
   --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1);
   --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.15);
+
+  /* Blueprint design system */
+  --font-display: 'Space Grotesk', 'Segoe UI', sans-serif;
+  --font-body: 'IBM Plex Sans', 'Segoe UI', sans-serif;
+  --paper: #F3EFE6;
+  --paper-muted: #E8E2D3;
+  --line-on-ink: rgba(201, 214, 241, 0.25);
+  --line-on-paper: #D8D1BE;
+  --ink-on-paper: #1C2430;
 }
 
 * {
@@ -35,7 +44,7 @@ html {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: var(--font-body);
   color: var(--text-on-dark-muted);
   background-color: var(--primary-color);
   line-height: 1.7;
@@ -71,25 +80,48 @@ section {
 }
 
 h1, h2, h3, h4 {
+  font-family: var(--font-display);
   font-weight: 700;
-  letter-spacing: -0.5px;
-  line-height: 1.2;
+  letter-spacing: -0.3px;
+  line-height: 1.15;
   margin-bottom: 16px;
   color: var(--primary-color);
 }
 
 h1 {
   font-size: 3.5rem;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: -1px;
 }
 
 h2 {
-  font-size: 2.75rem;
-  font-weight: 800;
+  font-size: 2.5rem;
+  font-weight: 700;
   letter-spacing: -0.5px;
-  margin-bottom: 3.5rem;
+  margin-bottom: 0;
   color: var(--accent-color);
+}
+
+.section-head {
+  display: flex;
+  align-items: baseline;
+  gap: 1.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.section-head .rule {
+  flex: 1;
+  height: 1px;
+  background: var(--line-on-ink);
+  min-width: 40px;
+}
+
+@media (max-width: 480px) {
+  .section-head {
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
 }
 
 h3 {
@@ -212,7 +244,6 @@ p {
   }
   h2 {
     font-size: 1.5rem;
-    margin-bottom: 1.8rem;
   }
   h3 {
     font-size: 1rem;
@@ -238,7 +269,6 @@ p {
   }
   h2 {
     font-size: 1.8rem;
-    margin-bottom: 2.5rem;
   }
   h3 {
     font-size: 1.25rem;

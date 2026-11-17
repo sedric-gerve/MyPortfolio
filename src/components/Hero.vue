@@ -1,17 +1,26 @@
 <template>
   <section class="hero">
+    <div class="grid-overlay" aria-hidden="true"></div>
     <div class="container">
       <div class="hero-content">
-        <h1>{{ t('heroTitle') }}</h1>
         <p class="role">{{ t('heroRole') }}</p>
-        <div class="services-rotator">
-          <span class="services-label">{{ t('servicesLabel') }}</span>
-          <Transition name="fade" mode="out-in">
-            <span :key="currentService" class="service-text">{{ currentService }}</span>
+        <h1>{{ t('heroTitle') }}</h1>
+
+        <div class="build-line">
+          <span class="build-label">{{ t('servicesLabel') }}</span>
+          <span class="leader" aria-hidden="true"></span>
+          <Transition name="swap" mode="out-in">
+            <span :key="currentService" class="build-tag">{{ currentService }}</span>
           </Transition>
         </div>
+
         <p class="subtitle">{{ t('heroSubtitle') }}</p>
-        <p class="location">📍 {{ t('heroLocation') }}</p>
+
+        <div class="meta-tags">
+          <span class="tag">{{ t('heroLocation') }}</span>
+          <span class="tag">{{ t('heroAvailability') }}</span>
+        </div>
+
         <div class="hero-buttons">
           <a href="/Sedric_Kouam_Resume.pdf" download="Sedric_Kouam_Resume.pdf"><button class="btn btn-secondary">{{ t('downloadResume') }}</button></a>
           <a href="#projects"><button class="btn btn-primary">{{ t('viewMyWork') }}</button></a>
@@ -31,7 +40,7 @@ export default {
     const t = inject('t')
     const locale = inject('locale')
 
-    const serviceKeys = ['service1', 'service2', 'service3']
+    const serviceKeys = ['service1', 'service2', 'service3', 'service4']
     const serviceIndex = ref(0)
     const currentService = computed(() => t(serviceKeys[serviceIndex.value]))
     let serviceTimer = null
@@ -42,10 +51,10 @@ export default {
         fr: "Sedric Gerve Kouam | Développeur Full-Stack & Spécialiste IA / Données"
       }
       const descriptions = {
-        en: "Official portfolio of Sedric Gerve Kouam, full-stack web developer specialized in Data & Human-AI Interaction. Discover his projects, skills, experience, certifications and contact him directly.",
-        fr: "Portfolio officiel de Sedric Gerve Kouam, développeur web full-stack spécialisé en Données & Interaction Humain-IA. Découvrez ses projets, compétences, expériences, certifications et contactez-le directement."
+        en: "Official portfolio of Sedric Gerve Kouam, full-stack web developer specialized in Data & Human-AI Interaction. Discover his projects, skills, experience and contact him directly.",
+        fr: "Portfolio officiel de Sedric Gerve Kouam, développeur web full-stack spécialisé en Données & Interaction Humain-IA. Découvrez ses projets, compétences, expériences et contactez-le directement."
       }
-      
+
       setMeta({
         title: titles[locale.value] || titles.en,
         description: descriptions[locale.value] || descriptions.en
@@ -53,7 +62,7 @@ export default {
 
       serviceTimer = setInterval(() => {
         serviceIndex.value = (serviceIndex.value + 1) % serviceKeys.length
-      }, 2000)
+      }, 2200)
     })
 
     onUnmounted(() => {
@@ -73,9 +82,20 @@ export default {
   color: var(--white);
   display: flex;
   align-items: center;
-  justify-content: center;
   min-height: 95vh;
-  text-align: center;
+  text-align: left;
+}
+
+.grid-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(var(--line-on-ink) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line-on-ink) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse 90% 70% at 20% 30%, black 40%, transparent 85%);
+  -webkit-mask-image: radial-gradient(ellipse 90% 70% at 20% 30%, black 40%, transparent 85%);
 }
 
 .container {
@@ -84,92 +104,132 @@ export default {
 }
 
 .hero-content {
-  animation: fadeInUp 0.9s ease-out;
+  max-width: 760px;
+}
+
+.role {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.5rem;
+  color: var(--accent-color);
 }
 
 .hero h1 {
   color: var(--white);
-  margin-bottom: 12px;
-  font-size: 4rem;
-  font-weight: 800;
+  margin-bottom: 1.4rem;
+  font-size: 3.6rem;
   letter-spacing: -1.5px;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-.role {
-  font-size: 1.6rem;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-  color: var(--accent-color);
-}
-
-.services-rotator {
+.build-line {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 0.6rem;
-  margin-bottom: 1.5rem;
-  font-size: 1.15rem;
-  flex-wrap: wrap;
+  margin-bottom: 1.8rem;
+  font-size: 1.1rem;
+  min-height: 2.4rem;
 }
 
-.services-label {
-  color: rgba(255, 255, 255, 0.85);
+.build-label {
   font-weight: 500;
+  color: rgba(255, 255, 255, 0.75);
 }
 
-.service-text {
+.leader {
+  width: 28px;
+  height: 1px;
+  background: var(--accent-color);
+  flex-shrink: 0;
+}
+
+.build-tag {
   display: inline-block;
+  font-family: var(--font-display);
+  font-weight: 600;
   color: var(--white);
-  font-weight: 700;
-  background-color: rgba(249, 115, 22, 0.15);
-  border: 1.5px solid var(--accent-color);
-  padding: 0.3rem 1rem;
-  border-radius: 20px;
+  border: 1px solid var(--accent-color);
+  border-radius: 3px;
+  padding: 0.3rem 0.85rem;
+  position: relative;
 }
 
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.4s ease;
+.build-tag::before,
+.build-tag::after {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border: 1px solid var(--accent-color);
 }
 
-.fade-enter-from,
-.fade-leave-to {
+.build-tag::before {
+  top: -4px;
+  left: -4px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.build-tag::after {
+  bottom: -4px;
+  right: -4px;
+  border-left: none;
+  border-top: none;
+}
+
+.swap-enter-active,
+.swap-leave-active {
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.swap-enter-from {
   opacity: 0;
+  transform: translateY(4px);
+}
+
+.swap-leave-to {
+  opacity: 0;
+  transform: translateY(-4px);
 }
 
 .subtitle {
-  font-size: 1.2rem;
-  max-width: 800px;
-  margin: 0 auto 1.5rem;
-  color: rgba(255, 255, 255, 0.9);
-  line-height: 1.8;
+  font-size: 1.1rem;
+  max-width: 620px;
+  margin: 0 0 1.8rem;
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.75;
   font-weight: 400;
 }
 
-.location {
-  font-size: 1rem;
-  margin-bottom: 2.5rem;
-  color: rgba(255, 255, 255, 0.8);
+.meta-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 2.4rem;
+}
+
+.tag {
+  font-size: 0.85rem;
   font-weight: 500;
-  letter-spacing: 0.5px;
+  color: rgba(255, 255, 255, 0.85);
+  border: 1px solid var(--line-on-ink);
+  border-radius: 3px;
+  padding: 0.35rem 0.7rem;
 }
 
 .hero-buttons {
   display: flex;
-  gap: 1.5rem;
-  justify-content: center;
+  gap: 1.2rem;
   flex-wrap: wrap;
-  animation: fadeInUp 0.9s ease-out 0.2s both;
 }
 
 .btn {
-  padding: 14px 32px;
-  border-radius: 10px;
-  font-size: 1.05rem;
+  padding: 14px 30px;
+  border-radius: 4px;
+  font-size: 1rem;
   font-weight: 600;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.25s ease;
 }
 
 .btn-primary {
@@ -178,22 +238,18 @@ export default {
 }
 
 .btn-primary:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 30px rgba(249, 115, 22, 0.4);
   background-color: #EA580C;
 }
 
 .btn-secondary {
   background-color: transparent;
-  color: var(--accent-color);
-  border: 2.5px solid var(--accent-color);
+  color: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.4);
 }
 
 .btn-secondary:hover {
-  background-color: var(--accent-color);
-  color: var(--white);
-  transform: translateY(-4px);
-  box-shadow: 0 10px 30px rgba(249, 115, 22, 0.3);
+  border-color: var(--white);
+  background-color: rgba(255, 255, 255, 0.06);
 }
 
 /* Mobile Phones (320px - 480px) */
@@ -202,41 +258,39 @@ export default {
     min-height: 70vh;
   }
 
+  .hero-content {
+    max-width: 100%;
+  }
+
   .hero h1 {
-    font-size: 1.75rem;
-    margin-bottom: 8px;
-  }
-
-  .role {
-    font-size: 1rem;
-    margin-bottom: 0.8rem;
-  }
-
-  .services-rotator {
-    font-size: 0.9rem;
+    font-size: 2rem;
     margin-bottom: 1rem;
   }
 
-  .service-text {
-    padding: 0.25rem 0.8rem;
+  .role {
+    font-size: 0.9rem;
+  }
+
+  .build-line {
+    font-size: 0.9rem;
+    margin-bottom: 1.2rem;
   }
 
   .subtitle {
     font-size: 0.9rem;
-    margin: 0 auto 1rem;
+    margin-bottom: 1.2rem;
   }
 
-  .location {
-    font-size: 0.85rem;
-    margin-bottom: 1.5rem;
+  .meta-tags {
+    margin-bottom: 1.6rem;
   }
 
   .hero-buttons {
-    gap: 0.8rem;
+    gap: 0.7rem;
   }
 
   .btn {
-    padding: 10px 18px;
+    padding: 11px 20px;
     font-size: 0.85rem;
   }
 }
@@ -248,24 +302,11 @@ export default {
   }
 
   .hero h1 {
-    font-size: 2.25rem;
-  }
-
-  .role {
-    font-size: 1.3rem;
+    font-size: 2.5rem;
   }
 
   .subtitle {
     font-size: 1rem;
-  }
-
-  .hero-buttons {
-    gap: 1rem;
-  }
-
-  .btn {
-    padding: 11px 22px;
-    font-size: 0.9rem;
   }
 }
 
@@ -276,7 +317,7 @@ export default {
   }
 
   .hero h1 {
-    font-size: 3.2rem;
+    font-size: 3rem;
   }
 }
 

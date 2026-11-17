@@ -5,20 +5,21 @@ export const translations = {
     skills: 'Skills',
     experiences: 'Experience',
     projects: 'Projects',
-    certifications: 'Certifications',
     contact: 'Contact',
 
     // Hero
     heroTitle: 'Sedric Gerve Kouam',
-    heroRole: 'Full-Stack Web Developer',
+    heroRole: 'Full-Stack Web Developer & AI Engineer',
     heroSubtitle: 'Full-Stack Developer building modern web applications with Laravel, Vue.js and the TALL stack — with a specialization in Data & Human-AI Interaction (LLMs, Prompt Engineering, HITL).',
-    heroLocation: 'Douala, Cameroon · Available for Remote Work Worldwide',
+    heroLocation: 'Douala, Cameroon',
+    heroAvailability: 'Open to remote work worldwide',
     downloadResume: 'Download Resume',
     viewMyWork: 'View My Work',
-    servicesLabel: 'I offer:',
+    servicesLabel: 'I build',
     service1: 'Website Creation',
     service2: 'Web App Development',
-    service3: 'Automation',
+    service3: 'Workflow Automation',
+    service4: 'AI Agents',
 
     // About
     aboutTitle: 'About Me',
@@ -71,6 +72,7 @@ export const translations = {
 
     // Projects
     projectsTitle: 'Projects',
+    projectsIntro: 'Shipped products and systems — not exercises. Each one is live, in use, or built for a real workflow.',
     gestiSmartName: 'Gestismart.com',
     gestiSmartDesc: 'Comprehensive business management solution with invoicing, inventory and client management. Built with the TALL stack for scalability and performance.',
     optiSalesName: 'Optisales.logiciel.com',
@@ -84,29 +86,6 @@ export const translations = {
     viewProject: 'View Project',
     github: 'GitHub',
 
-    // Certifications & Education
-    certsTitle: 'Certifications & Education',
-    certsSubtitle: 'AI Certifications',
-    educationSubtitle: 'Education',
-    cert1Title: 'Introduction to Generative AI for Software Development',
-    cert1Place: 'DeepLearning.AI (Coursera)',
-    cert1Date: 'July 2026',
-    cert2Title: 'LLM Fine-Tuning, Prompt Engineering & Model Evaluation',
-    cert2Place: 'Datalens (CipherSense)',
-    cert2Date: 'June 2026',
-    cert3Title: 'Human-in-the-Loop (HITL) QA & Data Quality Management',
-    cert3Place: 'Datalens (CipherSense)',
-    cert3Date: 'May 2026',
-    cert4Title: 'Essentials of Data Labelling & Annotation for AI Development',
-    cert4Place: 'Datalens (CipherSense)',
-    cert4Date: 'May 2026',
-    edu1Title: "Bachelor's Degree in Mathematics & Computer Science",
-    edu1Place: 'University of Douala',
-    edu1Date: '2018 – 2021',
-    edu2Title: 'Associate Degree (DEUG) in Computer Science',
-    edu2Place: 'University of Douala',
-    edu2Date: '2017',
-
     // Contact
     contactTitle: 'Get In Touch',
     contactIntro: 'Have a project in mind or just want to say hello? Feel free to reach out!',
@@ -119,7 +98,7 @@ export const translations = {
     phone: 'Phone',
     location: 'Location',
     social: 'Social',
-    locationValue: 'Douala, Cameroon · Available for Remote Work Worldwide',
+    locationValue: 'Douala, Cameroon — open to remote work worldwide',
     thankYouMessage: 'Thank you for your message! I will get back to you soon.',
 
     // Footer
@@ -132,20 +111,21 @@ export const translations = {
     skills: 'Compétences',
     experiences: 'Expérience',
     projects: 'Projets',
-    certifications: 'Certifications',
     contact: 'Contact',
 
     // Hero
     heroTitle: 'Sedric Gerve Kouam',
-    heroRole: 'Développeur Web Full-Stack',
+    heroRole: 'Développeur Web Full-Stack & Ingénieur IA',
     heroSubtitle: "Développeur Full-Stack créant des applications web modernes avec Laravel, Vue.js et la stack TALL — avec une spécialisation en Données & Interaction Humain-IA (LLM, Prompt Engineering, HITL).",
-    heroLocation: 'Douala, Cameroun · Disponible pour le télétravail à l\'international',
+    heroLocation: 'Douala, Cameroun',
+    heroAvailability: 'Ouvert au télétravail à l\'international',
     downloadResume: 'Télécharger le CV',
     viewMyWork: 'Voir mon travail',
-    servicesLabel: 'Je propose :',
-    service1: 'Création de sites web',
-    service2: "Création d'applications web",
-    service3: 'Automatisation',
+    servicesLabel: 'Je construis',
+    service1: 'Sites web',
+    service2: "Applications web",
+    service3: 'Automatisation de workflows',
+    service4: 'Agents IA',
 
     // About
     aboutTitle: 'À Propos de Moi',
@@ -198,6 +178,7 @@ export const translations = {
 
     // Projects
     projectsTitle: 'Projets',
+    projectsIntro: "Des produits et systèmes livrés — pas des exercices. Chacun est en ligne, utilisé, ou construit pour un vrai besoin métier.",
     gestiSmartName: 'Gestismart.com',
     gestiSmartDesc: "Solution complète de gestion d'entreprise avec facturation, inventaire et gestion client. Construite avec la stack TALL pour la scalabilité et la performance.",
     optiSalesName: 'Optisales.logiciel.com',
@@ -211,29 +192,6 @@ export const translations = {
     viewProject: 'Voir le Projet',
     github: 'GitHub',
 
-    // Certifications & Education
-    certsTitle: 'Certifications & Formation',
-    certsSubtitle: 'Certifications IA',
-    educationSubtitle: 'Formation',
-    cert1Title: 'Introduction to Generative AI for Software Development',
-    cert1Place: 'DeepLearning.AI (Coursera)',
-    cert1Date: 'Juillet 2026',
-    cert2Title: 'LLM Fine-Tuning, Prompt Engineering & Model Evaluation',
-    cert2Place: 'Datalens (CipherSense)',
-    cert2Date: 'Juin 2026',
-    cert3Title: 'Human-in-the-Loop (HITL) QA & Data Quality Management',
-    cert3Place: 'Datalens (CipherSense)',
-    cert3Date: 'Mai 2026',
-    cert4Title: 'Essentials of Data Labelling & Annotation for AI Development',
-    cert4Place: 'Datalens (CipherSense)',
-    cert4Date: 'Mai 2026',
-    edu1Title: 'Licence en Mathématiques & Informatique',
-    edu1Place: 'Université de Douala',
-    edu1Date: '2018 – 2021',
-    edu2Title: "DEUG en Informatique",
-    edu2Place: 'Université de Douala',
-    edu2Date: '2017',
-
     // Contact
     contactTitle: 'Me Contacter',
     contactIntro: "Vous avez un projet en tête ou vous voulez simplement me dire bonjour ? N'hésitez pas à me contacter !",
@@ -246,7 +204,7 @@ export const translations = {
     phone: 'Téléphone',
     location: 'Localisation',
     social: 'Réseaux Sociaux',
-    locationValue: 'Douala, Cameroun · Disponible pour le télétravail à l\'international',
+    locationValue: 'Douala, Cameroun — ouvert au télétravail à l\'international',
     thankYouMessage: 'Merci pour votre message ! Je vous répondrai bientôt.',
 
     // Footer

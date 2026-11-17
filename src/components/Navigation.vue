@@ -20,7 +20,6 @@
         <li><a href="#skills" @click="closeMenu">{{ t('skills') }}</a></li>
         <li><a href="#experience" @click="closeMenu">{{ t('experiences') }}</a></li>
         <li><a href="#projects" @click="closeMenu">{{ t('projects') }}</a></li>
-        <li><a href="#certifications" @click="closeMenu">{{ t('certifications') }}</a></li>
         <li><a href="#contact" class="cta-button" @click="closeMenu">{{ t('contact') }}</a></li>
         <li class="language-switcher">
           <button
@@ -88,15 +87,11 @@ export default {
 }
 
 .logo {
-  font-size: 1.4rem;
-  font-weight: 800;
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
   color: var(--accent-color);
-  letter-spacing: -0.5px;
-  transition: transform 0.3s ease;
-}
-
-.logo:hover {
-  transform: scale(1.05);
+  letter-spacing: -0.3px;
 }
 
 .menu-toggle {
@@ -142,7 +137,7 @@ export default {
 .nav-links a {
   color: var(--text-on-dark);
   font-weight: 500;
-  transition: all 0.3s ease;
+  transition: color 0.2s ease;
   position: relative;
   font-size: 0.95rem;
 }
@@ -153,9 +148,9 @@ export default {
   bottom: -4px;
   left: 0;
   width: 0;
-  height: 2px;
+  height: 1px;
   background: var(--accent-color);
-  transition: width 0.3s ease;
+  transition: width 0.2s ease;
 }
 
 .nav-links a:hover {
@@ -169,16 +164,13 @@ export default {
 .cta-button {
   background: var(--accent-color);
   color: var(--white) !important;
-  padding: 0.65rem 1.8rem;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
+  padding: 0.6rem 1.6rem;
+  border-radius: 4px;
+  transition: background 0.2s ease;
   font-weight: 600;
 }
 
 .cta-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(249, 115, 22, 0.4);
   color: var(--white) !important;
   background: #EA580C;
 }
@@ -282,12 +274,12 @@ export default {
   background-color: transparent;
   color: var(--text-on-dark);
   padding: 0.4rem 0.8rem;
-  border: 1.5px solid rgba(255, 255, 255, 0.3);
-  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
   font-weight: 600;
   font-size: 0.8rem;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
 }
 
 .lang-btn.active {

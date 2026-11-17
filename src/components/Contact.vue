@@ -1,7 +1,10 @@
 <template>
   <section id="contact" class="contact">
     <div class="container">
-      <h2>{{ t('contactTitle') }}</h2>
+      <div class="section-head">
+        <h2>{{ t('contactTitle') }}</h2>
+        <span class="rule"></span>
+      </div>
       <p class="contact-intro">{{ t('contactIntro') }}</p>
       <div class="contact-content">
         <form @submit.prevent="submitForm" class="contact-form">
@@ -148,35 +151,24 @@ export default {
   opacity: 0.3;
 }
 
-.contact h2 {
-  text-align: center;
-  margin-bottom: 1rem;
-  animation: fadeInUp 0.7s ease-out;
-}
-
 .contact-intro {
-  text-align: center;
   color: var(--text-on-dark-muted);
+  margin-top: -2.5rem;
   margin-bottom: 3.5rem;
-  font-size: 1.1rem;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-  animation: fadeInUp 0.7s ease-out 0.1s both;
+  font-size: 1.05rem;
+  max-width: 560px;
 }
 
 .contact-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
-  margin-top: 3rem;
 }
 
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 1.8rem;
-  animation: slideInLeft 0.8s ease-out;
+  gap: 1.5rem;
 }
 
 .form-group {
@@ -186,14 +178,14 @@ export default {
 }
 
 .form-input {
-  padding: 1rem;
-  border: 1.5px solid var(--bg-light);
-  border-radius: 10px;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--line-on-paper);
+  border-radius: 4px;
   font-family: inherit;
   font-size: 1rem;
-  transition: all 0.3s ease;
-  background-color: var(--white);
-  color: var(--text-dark);
+  transition: border-color 0.2s ease;
+  background-color: var(--paper);
+  color: var(--ink-on-paper);
 }
 
 .form-input::placeholder {
@@ -202,84 +194,61 @@ export default {
 
 .form-input:focus {
   outline: none;
-  border-color: var(--secondary-color);
-  box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1);
-  background-color: rgba(30, 58, 138, 0.02);
-}
-
-.form-input:hover {
-  border-color: var(--secondary-color);
+  border-color: var(--accent-color);
 }
 
 .submit-btn {
   background: var(--accent-color);
   color: var(--white);
-  padding: 1.2rem;
-  border-radius: 10px;
-  font-size: 1.05rem;
+  padding: 1rem;
+  border-radius: 4px;
+  font-size: 1rem;
   font-weight: 600;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
+  transition: background 0.2s ease;
   cursor: pointer;
   margin-top: 0.5rem;
 }
 
 .submit-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(249, 115, 22, 0.4);
   background: #EA580C;
-}
-
-.submit-btn:active {
-  transform: translateY(0);
 }
 
 .contact-info {
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
-  animation: slideInRight 0.8s ease-out;
+  border-top: 1px solid var(--line-on-ink);
 }
 
 .info-item {
   display: flex;
-  gap: 1.5rem;
-  padding: 1.8rem;
-  background: var(--white);
-  border-radius: 12px;
-  border: 1px solid var(--bg-light);
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-}
-
-.info-item:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(30, 58, 138, 0.12);
-  border-color: var(--secondary-color);
+  gap: 1.3rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--line-on-ink);
 }
 
 .info-icon {
-  font-size: 2.2rem;
+  font-size: 1.6rem;
   flex-shrink: 0;
+  line-height: 1.4;
 }
 
 .info-item h4 {
-  color: var(--primary-color);
-  margin-bottom: 0.5rem;
-  font-size: 1.1rem;
+  color: var(--text-on-dark-muted);
+  margin-bottom: 0.3rem;
+  font-size: 0.85rem;
+  font-weight: 500;
 }
 
 .info-item p {
-  color: var(--text-light);
-  font-size: 0.95rem;
+  color: var(--white);
+  font-size: 1rem;
   margin: 0;
 }
 
 .info-item p a {
-  color: var(--secondary-color);
-  font-weight: 600;
-  text-decoration: none;
-  transition: color 0.3s ease;
+  color: var(--white);
+  font-weight: 500;
+  transition: color 0.2s ease;
 }
 
 .info-item p a:hover {
@@ -289,34 +258,18 @@ export default {
 .social-links {
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
-  margin-top: 0.5rem;
+  gap: 0.5rem;
+  margin-top: 0.2rem;
 }
 
 .social-links a {
-  color: var(--secondary-color);
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
+  color: var(--white);
+  font-weight: 500;
   width: fit-content;
-}
-
-.social-links a::before {
-  content: '→';
-  opacity: 0;
-  transition: all 0.3s ease;
 }
 
 .social-links a:hover {
   color: var(--accent-color);
-  padding-left: 0.4rem;
-}
-
-.social-links a:hover::before {
-  opacity: 1;
 }
 
 /* Mobile Phones (320px - 480px) */
@@ -326,12 +279,9 @@ export default {
     gap: 1.5rem;
   }
 
-  .contact h2 {
-    margin-bottom: 0.5rem;
-  }
-
   .contact-intro {
-    margin-bottom: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 2rem;
     font-size: 0.95rem;
   }
 
@@ -350,28 +300,16 @@ export default {
   }
 
   .info-item {
-    padding: 1.2rem;
+    padding: 1.1rem 0;
     gap: 1rem;
   }
 
   .info-icon {
-    font-size: 1.8rem;
-  }
-
-  .info-item h4 {
-    font-size: 1rem;
+    font-size: 1.4rem;
   }
 
   .info-item p {
     font-size: 0.9rem;
-  }
-
-  .social-links {
-    gap: 0.5rem;
-  }
-
-  .contact-info {
-    gap: 1rem;
   }
 }
 
@@ -382,24 +320,12 @@ export default {
     gap: 2rem;
   }
 
-  .contact h2 {
-    margin-bottom: 0.5rem;
-  }
-
   .contact-intro {
     margin-bottom: 2rem;
     font-size: 1rem;
   }
 
   .contact-form {
-    gap: 1.5rem;
-  }
-
-  .info-item {
-    padding: 1.5rem;
-  }
-
-  .contact-info {
     gap: 1.5rem;
   }
 }
