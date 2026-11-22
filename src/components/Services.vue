@@ -8,7 +8,7 @@
       <p class="services-intro">{{ t('servicesIntro') }}</p>
 
       <div class="services-grid">
-        <article v-for="service in services" :key="service.id" class="service-card">
+        <article v-for="service in services" :key="service.id" class="service-card" :class="{ featured: service.featured }">
           <span class="service-icon">{{ service.icon }}</span>
           <h3>{{ t(service.name) }}</h3>
           <p>{{ t(service.description) }}</p>
@@ -43,7 +43,8 @@ export default {
           name: 'svcAgentsName',
           description: 'svcAgentsDesc',
           icon: '🤖',
-          tags: ['n8n', 'Claude', 'Automation']
+          tags: ['n8n', 'Claude', 'Automation'],
+          featured: true
         },
         {
           id: 3,
@@ -106,6 +107,10 @@ export default {
 
 .service-card:hover {
   border-color: var(--accent-color);
+}
+
+.service-card.featured {
+  border: 1.5px solid var(--accent-color);
 }
 
 .service-icon {

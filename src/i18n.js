@@ -4,7 +4,6 @@ export const translations = {
     about: 'About',
     services: 'Services',
     skills: 'Skills',
-    experiences: 'Experience',
     projects: 'Projects',
     contact: 'Contact',
 
@@ -68,21 +67,6 @@ export const translations = {
     analyticalRigor: 'Analytical Rigor',
     analyticalRigorDescription: 'Scientific analysis and fact-checking rooted in an academic foundation in mathematics.',
 
-    // Experience
-    experienceTitle: 'Experience',
-    job1Title: 'Full-Stack Web Developer (Freelance)',
-    job1Company: 'Independent',
-    job1Date: '2026 – Present',
-    job1Desc: 'Design and develop modern applications incorporating Artificial Intelligence modules and automation features. Manage the full software development lifecycle — architecture, coding, debugging and rigorous testing — and optimize user experiences through AI-driven interfaces and structured data pipelines.',
-    job2Title: 'Production Director',
-    job2Company: 'KPRINT Printing',
-    job2Date: '2024 – 2025',
-    job2Desc: 'Fully supervised the production process, ensuring compliance with quality, cost and deadline objectives. Coordinated cross-functional teams and optimized operational workflows.',
-    job3Title: 'Full-Stack Web Developer',
-    job3Company: 'localhost Digital',
-    job3Date: '2020 – 2024',
-    job3Desc: 'Handled corrective maintenance and resolved complex technical anomalies in large-scale web systems. Executed unit and integration tests to guarantee code stability, security and reliability. Provided technical leadership, conducted code reviews and mentored a team of developers.',
-
     // Projects
     projectsTitle: 'Projects',
     projectsIntro: 'Shipped products and systems — not exercises. Each one is live, in use, or built for a real workflow.',
@@ -128,7 +112,6 @@ export const translations = {
     about: 'À propos',
     services: 'Services',
     skills: 'Compétences',
-    experiences: 'Expérience',
     projects: 'Projets',
     contact: 'Contact',
 
@@ -191,21 +174,6 @@ export const translations = {
     hitlQaDescription: "Supervision Human-in-the-Loop, évaluation de la qualité des données et validation des systèmes pilotés par l'IA.",
     analyticalRigor: 'Rigueur Analytique',
     analyticalRigorDescription: "Analyse scientifique et vérification des faits ancrées dans une formation académique en mathématiques.",
-
-    // Experience
-    experienceTitle: 'Expérience',
-    job1Title: 'Développeur Web Full-Stack (Freelance)',
-    job1Company: 'Indépendant',
-    job1Date: '2026 – Présent',
-    job1Desc: "Conception et développement d'applications modernes intégrant des modules d'Intelligence Artificielle et des fonctionnalités d'automatisation. Gestion complète du cycle de développement — architecture, codage, débogage et tests rigoureux — et optimisation de l'expérience utilisateur via des interfaces pilotées par l'IA et des pipelines de données structurés.",
-    job2Title: 'Directeur de Production',
-    job2Company: 'KPRINT Printing',
-    job2Date: '2024 – 2025',
-    job2Desc: "Supervision complète du processus de production, garantissant le respect des objectifs de qualité, de coût et de délai. Coordination d'équipes transversales et optimisation des flux de travail opérationnels.",
-    job3Title: 'Développeur Web Full-Stack',
-    job3Company: 'localhost Digital',
-    job3Date: '2020 – 2024',
-    job3Desc: "Maintenance corrective et résolution d'anomalies techniques complexes dans des systèmes web à grande échelle. Exécution de tests unitaires et d'intégration pour garantir la stabilité, la sécurité et la fiabilité du code. Leadership technique, revues de code et encadrement d'une équipe de développeurs.",
 
     // Projects
     projectsTitle: 'Projets',

@@ -17,7 +17,7 @@
         <p class="subtitle">{{ t('heroSubtitle') }}</p>
 
         <div class="meta-tags">
-          <span class="tag">{{ t('heroLocation') }}</span>
+          <span class="tag"><span class="status-dot" aria-hidden="true"></span>{{ t('heroLocation') }}</span>
           <span class="tag">{{ t('heroAvailability') }}</span>
         </div>
 
@@ -51,8 +51,8 @@ export default {
         fr: "Sedric Gerve Kouam | Développeur Full-Stack & Spécialiste IA / Données"
       }
       const descriptions = {
-        en: "Official portfolio of Sedric Gerve Kouam, full-stack web developer specialized in Data & Human-AI Interaction. Discover his projects, skills, experience and contact him directly.",
-        fr: "Portfolio officiel de Sedric Gerve Kouam, développeur web full-stack spécialisé en Données & Interaction Humain-IA. Découvrez ses projets, compétences, expériences et contactez-le directement."
+        en: "Official portfolio of Sedric Gerve Kouam, full-stack web developer specialized in Data & Human-AI Interaction. Discover his services, projects, skills and contact him directly.",
+        fr: "Portfolio officiel de Sedric Gerve Kouam, développeur web full-stack spécialisé en Données & Interaction Humain-IA. Découvrez ses services, projets, compétences et contactez-le directement."
       }
 
       setMeta({
@@ -210,12 +210,23 @@ export default {
 }
 
 .tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   font-size: 0.85rem;
   font-weight: 500;
   color: rgba(255, 255, 255, 0.85);
   border: 1px solid var(--line-on-ink);
   border-radius: 3px;
   padding: 0.35rem 0.7rem;
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-color);
+  flex-shrink: 0;
 }
 
 .hero-buttons {
