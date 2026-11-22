@@ -1,12 +1,12 @@
 <template>
   <section id="contact" class="contact">
     <div class="container">
-      <div class="section-head">
-        <h2>{{ t('contactTitle') }}</h2>
-        <span class="rule"></span>
+      <div class="cta-banner">
+        <h2 class="cta-title">{{ t('contactTitle') }}</h2>
+        <p class="contact-intro">{{ t('contactIntro') }}</p>
+        <a href="#contact-form" class="btn btn-primary">{{ t('ctaStartConversation') }}</a>
       </div>
-      <p class="contact-intro">{{ t('contactIntro') }}</p>
-      <div class="contact-content">
+      <div class="contact-content" id="contact-form">
         <form @submit.prevent="submitForm" class="contact-form">
           <div class="form-group">
             <input
@@ -151,12 +151,45 @@ export default {
   opacity: 0.3;
 }
 
+.cta-banner {
+  position: relative;
+  text-align: center;
+  padding: 3rem 2rem 4rem;
+  margin-bottom: 4rem;
+  border: 1px solid var(--line-on-ink);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.cta-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(var(--line-on-ink) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line-on-ink) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(ellipse 70% 100% at 50% 0%, black 40%, transparent 85%);
+  -webkit-mask-image: radial-gradient(ellipse 70% 100% at 50% 0%, black 40%, transparent 85%);
+}
+
+.cta-title {
+  position: relative;
+  font-size: 2.75rem;
+  margin-bottom: 1rem;
+}
+
 .contact-intro {
+  position: relative;
   color: var(--text-on-dark-muted);
-  margin-top: -2.5rem;
-  margin-bottom: 3.5rem;
+  margin: 0 auto 2rem;
   font-size: 1.05rem;
-  max-width: 560px;
+  max-width: 480px;
+}
+
+.cta-banner .btn {
+  position: relative;
 }
 
 .contact-content {
@@ -279,9 +312,17 @@ export default {
     gap: 1.5rem;
   }
 
+  .cta-banner {
+    padding: 2rem 1.2rem 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .cta-title {
+    font-size: 1.6rem;
+  }
+
   .contact-intro {
-    margin-top: 0;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     font-size: 0.95rem;
   }
 

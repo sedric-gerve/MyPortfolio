@@ -11,6 +11,9 @@
         <article v-for="(project, index) in projects" :key="project.id" class="project-card">
           <div class="project-ref">{{ ref(index) }}</div>
 
+          <div v-if="project.images" class="browser-chrome">
+            <span></span><span></span><span></span>
+          </div>
           <div v-if="project.images" class="project-gallery">
             <a
               v-for="image in project.images"
@@ -140,6 +143,7 @@ export default {
 .projects {
   background: var(--primary-color);
   position: relative;
+  overflow: hidden;
 }
 
 .projects::before {
@@ -151,6 +155,25 @@ export default {
   height: 1px;
   background: linear-gradient(90deg, transparent, rgba(249, 115, 22, 0.4), transparent);
   opacity: 0.3;
+  z-index: 1;
+}
+
+.projects::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(var(--line-on-ink) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line-on-ink) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse 70% 60% at 90% 10%, black 30%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse 70% 60% at 90% 10%, black 30%, transparent 75%);
+}
+
+.projects > .container {
+  position: relative;
+  z-index: 1;
 }
 
 .projects-intro {
@@ -194,18 +217,37 @@ export default {
   display: inline-block;
 }
 
+.browser-chrome {
+  display: flex;
+  gap: 0.3rem;
+  align-items: center;
+  background: var(--paper-muted);
+  border: 1px solid var(--line-on-paper);
+  border-bottom: none;
+  border-radius: 3px 3px 0 0;
+  padding: 0.5rem 0.7rem;
+}
+
+.browser-chrome span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--line-on-paper);
+}
+
 .project-gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0.5rem;
+  gap: 1px;
   margin-bottom: 1.2rem;
+  background: var(--line-on-paper);
+  border: 1px solid var(--line-on-paper);
+  border-top: none;
 }
 
 .project-gallery-link {
   display: block;
   overflow: hidden;
-  border: 1px solid var(--line-on-paper);
-  border-radius: 2px;
   aspect-ratio: 16 / 10;
   background: var(--paper-muted);
 }

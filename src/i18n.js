@@ -93,6 +93,7 @@ export const translations = {
     // Contact
     contactTitle: 'Get In Touch',
     contactIntro: 'Have a project in mind or just want to say hello? Feel free to reach out!',
+    ctaStartConversation: 'Start a Conversation',
     yourName: 'Your Name',
     yourEmail: 'Your Email',
     subject: 'Subject',
@@ -203,6 +204,7 @@ export const translations = {
     // Contact
     contactTitle: 'Me Contacter',
     contactIntro: "Vous avez un projet en tête ou vous voulez simplement me dire bonjour ? N'hésitez pas à me contacter !",
+    ctaStartConversation: 'Démarrer la conversation',
     yourName: 'Votre Nom',
     yourEmail: 'Votre Email',
     subject: 'Sujet',

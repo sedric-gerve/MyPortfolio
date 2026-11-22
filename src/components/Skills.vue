@@ -111,7 +111,7 @@ export default {
 
 <style scoped>
 .skills {
-  background: var(--primary-color);
+  background: var(--paper);
   position: relative;
 }
 
@@ -122,8 +122,11 @@ export default {
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(249, 115, 22, 0.4), transparent);
-  opacity: 0.3;
+  background: linear-gradient(90deg, transparent, rgba(249, 115, 22, 0.5), transparent);
+}
+
+.skills :deep(.section-head .rule) {
+  background: var(--line-on-paper);
 }
 
 .skill-group {
@@ -137,7 +140,7 @@ export default {
 .group-title {
   font-size: 1.05rem;
   margin-bottom: 1.5rem;
-  color: var(--text-on-dark-muted);
+  color: var(--secondary-color);
   font-weight: 600;
 }
 
@@ -145,18 +148,18 @@ export default {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 0;
-  border-top: 1px solid var(--line-on-ink);
+  border-top: 1px solid var(--line-on-paper);
 }
 
 .skill-row {
   display: flex;
   gap: 1rem;
   padding: 1.5rem 1rem 1.5rem 0;
-  border-bottom: 1px solid var(--line-on-ink);
+  border-bottom: 1px solid var(--line-on-paper);
 }
 
 .skill-row:nth-child(odd) {
-  border-right: 1px solid var(--line-on-ink);
+  border-right: 1px solid var(--line-on-paper);
   padding-right: 1.5rem;
 }
 
@@ -171,13 +174,13 @@ export default {
 }
 
 .skill-body h4 {
-  color: var(--white);
+  color: var(--ink-on-paper);
   margin-bottom: 0.4rem;
   font-size: 1.05rem;
 }
 
 .skill-body p {
-  color: var(--text-on-dark-muted);
+  color: var(--text-light);
   margin-bottom: 0.9rem;
   font-size: 0.9rem;
   line-height: 1.55;
@@ -199,7 +202,7 @@ export default {
 .tag:not(:last-child)::after {
   content: '·';
   margin-left: 0.5rem;
-  color: var(--line-on-ink);
+  color: var(--line-on-paper);
 }
 
 /* Mobile Phones (320px - 480px) */
