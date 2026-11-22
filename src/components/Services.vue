@@ -61,6 +61,12 @@ export default {
           name: 'svcSeoName',
           category: 'svcSeoCategory',
           description: 'svcSeoDesc'
+        },
+        {
+          id: 5,
+          name: 'svcDeployName',
+          category: 'svcDeployCategory',
+          description: 'svcDeployDesc'
         }
       ]
     }

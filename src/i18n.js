@@ -24,7 +24,7 @@ export const translations = {
     // Services
     servicesEyebrow: 'What I Do',
     servicesTitle: 'Services',
-    servicesIntro: 'Four ways I can help, from a new site to AI that reads your own data and acts on it.',
+    servicesIntro: 'Five ways I can help, from a new site to AI that reads your own data and acts on it.',
     svcWebName: 'Website & Web App Development',
     svcWebCategory: 'Custom sites, SaaS & web apps',
     svcWebDesc: 'Full-stack websites and web applications built with Laravel, Vue.js and the TALL stack — from first line of code to production, built to scale.',
@@ -37,6 +37,9 @@ export const translations = {
     svcSeoName: 'Technical SEO Optimization',
     svcSeoCategory: 'Technical visibility & performance',
     svcSeoDesc: 'Site speed, structured data, crawlability and Core Web Vitals — the technical fixes that get a site found and ranked, not just built.',
+    svcDeployName: 'Deployment & Hosting',
+    svcDeployCategory: 'CI/CD, hosting & going live',
+    svcDeployDesc: 'Production deployment and hosting setup — Docker, CI/CD pipelines, and going live on Vercel, Railway or your own server, configured right from day one.',
 
     // About
     aboutTitle: 'About Me',
@@ -137,7 +140,7 @@ export const translations = {
     // Services
     servicesEyebrow: 'Ce Que Je Fais',
     servicesTitle: 'Services',
-    servicesIntro: "Quatre façons de vous aider, d'un nouveau site à une IA qui lit vos propres données et agit dessus.",
+    servicesIntro: "Cinq façons de vous aider, d'un nouveau site à une IA qui lit vos propres données et agit dessus.",
     svcWebName: 'Développement de sites et applications web',
     svcWebCategory: 'Sites vitrines, SaaS et applications sur mesure',
     svcWebDesc: "Sites web et applications full-stack construits avec Laravel, Vue.js et la stack TALL — de la première ligne de code à la production, conçus pour évoluer.",
@@ -150,6 +153,9 @@ export const translations = {
     svcSeoName: 'Optimisation SEO Technique',
     svcSeoCategory: 'Visibilité et performance technique',
     svcSeoDesc: "Vitesse du site, données structurées, indexabilité et Core Web Vitals — les corrections techniques qui permettent à un site d'être trouvé et bien classé, pas seulement construit.",
+    svcDeployName: 'Déploiement & Hébergement',
+    svcDeployCategory: 'CI/CD, hébergement et mise en production',
+    svcDeployDesc: "Déploiement en production et configuration d'hébergement — Docker, pipelines CI/CD, et mise en ligne sur Vercel, Railway ou votre propre serveur, bien configurés dès le premier jour.",
 
     // About
     aboutTitle: 'À Propos de Moi',
