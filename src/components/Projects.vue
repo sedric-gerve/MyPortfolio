@@ -105,6 +105,25 @@ export default {
             { src: '/ai-freelance-n8n.png', alt: 'Automated AI freelance opportunity search workflow in n8n' },
             { src: '/ai-freelance-gmail.png', alt: 'Email containing filtered AI freelance opportunities' }
           ]
+        },
+        {
+          id: 6,
+          name: 'invoiceAutomationName',
+          description: 'invoiceAutomationDesc',
+          icon: '🧾',
+          technologies: ['n8n', 'Claude', 'MySQL', 'IMAP/SMTP', 'Human-in-the-Loop'],
+          images: [
+            { src: '/invoice-automation-workflow.png', alt: 'n8n invoice intake workflow with Claude extraction and validation checks' },
+            { src: '/invoice-automation-approval.png', alt: 'Human approval email for an invoice that needs review' },
+            { src: '/invoice-automation-digest.png', alt: 'Automated weekly digest email of overdue invoices' }
+          ]
+        },
+        {
+          id: 7,
+          name: 'supportAgentName',
+          description: 'supportAgentDesc',
+          icon: '🎧',
+          technologies: ['n8n', 'PostgreSQL', 'pgvector', 'Voyage AI', 'Claude', 'RAG']
         }
       ]
     }

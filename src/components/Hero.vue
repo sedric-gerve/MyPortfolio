@@ -22,7 +22,7 @@
         </div>
 
         <div class="hero-buttons">
-          <a href="/Sedric_Kouam_Resume.pdf" download="Sedric_Kouam_Resume.pdf"><button class="btn btn-secondary">{{ t('downloadResume') }}</button></a>
+          <a href="/Sedric_Kouam_Resume_2026-11.pdf" download="Sedric_Kouam_Resume.pdf"><button class="btn btn-secondary">{{ t('downloadResume') }}</button></a>
           <a href="#projects"><button class="btn btn-primary">{{ t('viewMyWork') }}</button></a>
         </div>
       </div>

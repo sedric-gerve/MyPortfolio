@@ -83,6 +83,10 @@ export const translations = {
     aiRagCrmDesc: 'Internal CRM/ERP application with an AI assistant that answers natural-language questions about clients, opportunities and orders through a complete RAG pipeline.',
     aiFreelanceWatchName: 'AI Freelance Opportunity Watch',
     aiFreelanceWatchDesc: 'Automated n8n workflow that searches for AI training and evaluation freelance missions, filters them with Gemini using Tavily results, and sends relevant opportunities by email every Monday.',
+    invoiceAutomationName: 'Invoice-to-Cash Automation',
+    invoiceAutomationDesc: 'Four connected n8n workflows covering the full invoice lifecycle: Claude extracts and validates incoming PDFs, chases overdue invoices with tone-adjusted reminders, confirms payments, and sends a Monday summary — with human approval at every uncertain step.',
+    supportAgentName: 'AI Customer Support Agent',
+    supportAgentDesc: 'n8n workflow with a RAG knowledge base (PostgreSQL + pgvector, Voyage AI embeddings) that answers support emails from documentation alone and escalates to a human on low confidence or a detected complaint — every decision is logged.',
     viewProject: 'View Project',
     github: 'GitHub',
 
@@ -189,6 +193,10 @@ export const translations = {
     aiRagCrmDesc: "Application CRM/ERP interne avec un assistant IA capable de répondre en langage naturel sur les clients, opportunités et commandes grâce à une architecture RAG complète.",
     aiFreelanceWatchName: 'Veille des Missions Freelance IA',
     aiFreelanceWatchDesc: "Workflow n8n automatisé qui recherche des missions freelance liées à l'entraînement et l'évaluation des modèles d'IA, les filtre avec Gemini à partir de résultats Tavily, puis envoie les opportunités pertinentes par email chaque lundi.",
+    invoiceAutomationName: 'Automatisation Facture-à-Encaissement',
+    invoiceAutomationDesc: "Quatre workflows n8n reliés couvrant tout le cycle de vie des factures : Claude extrait et valide les PDF reçus, relance les factures en retard avec un ton adapté, confirme les paiements et envoie un résumé chaque lundi — avec validation humaine à chaque étape incertaine.",
+    supportAgentName: 'Agent IA de Support Client',
+    supportAgentDesc: "Workflow n8n avec base de connaissances RAG (PostgreSQL + pgvector, embeddings Voyage AI) qui répond aux emails de support uniquement à partir de la documentation et escalade vers un humain en cas de faible confiance ou de réclamation détectée — chaque décision est journalisée.",
     viewProject: 'Voir le Projet',
     github: 'GitHub',
 
