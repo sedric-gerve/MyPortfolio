@@ -123,7 +123,12 @@ export default {
           name: 'supportAgentName',
           description: 'supportAgentDesc',
           icon: '🎧',
-          technologies: ['n8n', 'PostgreSQL', 'pgvector', 'Voyage AI', 'Claude', 'RAG']
+          technologies: ['n8n', 'PostgreSQL', 'pgvector', 'Voyage AI', 'Claude', 'RAG'],
+          images: [
+            { src: '/support-agent-workflow.png', alt: 'n8n customer support RAG workflow with similarity search and Claude reply drafting' },
+            { src: '/support-agent-reply.png', alt: 'Automatic support reply answered from the knowledge base' },
+            { src: '/support-agent-escalation.png', alt: 'Escalation email sent to a human for an out-of-scope question' }
+          ]
         }
       ]
     }
