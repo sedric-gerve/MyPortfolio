@@ -4,6 +4,7 @@
       <div class="footer-content">
         <p>{{ t('footerCopyright') }}</p>
         <div class="footer-links">
+          <a href="#services">{{ t('services') }}</a>
           <a href="#about">{{ t('about') }}</a>
           <a href="#projects">{{ t('projects') }}</a>
           <a href="#contact">{{ t('contact') }}</a>

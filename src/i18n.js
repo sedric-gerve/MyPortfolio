@@ -2,6 +2,7 @@ export const translations = {
   en: {
     // Navigation
     about: 'About',
+    services: 'Services',
     skills: 'Skills',
     experiences: 'Experience',
     projects: 'Projects',
@@ -20,6 +21,18 @@ export const translations = {
     service2: 'Web App Development',
     service3: 'Workflow Automation',
     service4: 'AI Agents',
+
+    // Services
+    servicesTitle: 'Services',
+    servicesIntro: 'Four ways I can help, from a new site to AI that reads your own data and acts on it.',
+    svcWebName: 'Website & Web App Development',
+    svcWebDesc: 'Full-stack websites and web applications built with Laravel, Vue.js and the TALL stack — from first line of code to production, built to scale.',
+    svcAgentsName: 'AI Agents & Automation',
+    svcAgentsDesc: 'n8n workflows and AI agents that handle support, data entry and repetitive tasks — with human approval built in wherever a decision matters.',
+    svcRagName: 'RAG Systems',
+    svcRagDesc: 'Retrieval-Augmented Generation pipelines that let an AI answer from your own documents and data — grounded in your content, not invented.',
+    svcSeoName: 'Technical SEO Optimization',
+    svcSeoDesc: 'Site speed, structured data, crawlability and Core Web Vitals — the technical fixes that get a site found and ranked, not just built.',
 
     // About
     aboutTitle: 'About Me',
@@ -113,6 +126,7 @@ export const translations = {
   fr: {
     // Navigation
     about: 'À propos',
+    services: 'Services',
     skills: 'Compétences',
     experiences: 'Expérience',
     projects: 'Projets',
@@ -131,6 +145,18 @@ export const translations = {
     service2: "Applications web",
     service3: 'Automatisation de workflows',
     service4: 'Agents IA',
+
+    // Services
+    servicesTitle: 'Services',
+    servicesIntro: "Quatre façons de vous aider, d'un nouveau site à une IA qui lit vos propres données et agit dessus.",
+    svcWebName: 'Développement de sites et applications web',
+    svcWebDesc: "Sites web et applications full-stack construits avec Laravel, Vue.js et la stack TALL — de la première ligne de code à la production, conçus pour évoluer.",
+    svcAgentsName: 'Agents IA & Automatisation',
+    svcAgentsDesc: "Workflows n8n et agents IA qui gèrent le support, la saisie de données et les tâches répétitives — avec validation humaine intégrée partout où une décision compte.",
+    svcRagName: 'Systèmes RAG',
+    svcRagDesc: "Pipelines de Retrieval-Augmented Generation qui permettent à une IA de répondre à partir de vos propres documents et données — ancrée dans votre contenu, jamais inventée.",
+    svcSeoName: 'Optimisation SEO Technique',
+    svcSeoDesc: "Vitesse du site, données structurées, indexabilité et Core Web Vitals — les corrections techniques qui permettent à un site d'être trouvé et bien classé, pas seulement construit.",
 
     // About
     aboutTitle: 'À Propos de Moi',

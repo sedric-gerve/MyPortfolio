@@ -16,6 +16,7 @@
       </button>
 
       <ul class="nav-links" :class="{ open: isMenuOpen }">
+        <li><a href="#services" @click="closeMenu">{{ t('services') }}</a></li>
         <li><a href="#about" @click="closeMenu">{{ t('about') }}</a></li>
         <li><a href="#skills" @click="closeMenu">{{ t('skills') }}</a></li>
         <li><a href="#experience" @click="closeMenu">{{ t('experiences') }}</a></li>

@@ -2,6 +2,7 @@
   <div id="app">
     <Navigation />
     <Hero />
+    <Services />
     <About />
     <Skills />
     <Experience />
@@ -15,6 +16,7 @@
 import { ref, provide, computed, watchEffect } from 'vue'
 import Navigation from './components/Navigation.vue'
 import Hero from './components/Hero.vue'
+import Services from './components/Services.vue'
 import About from './components/About.vue'
 import Skills from './components/Skills.vue'
 import Experience from './components/Experience.vue'
@@ -28,6 +30,7 @@ export default {
   components: {
     Navigation,
     Hero,
+    Services,
     About,
     Skills,
     Experience,
