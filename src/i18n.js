@@ -8,9 +8,8 @@ export const translations = {
     contact: 'Contact',
 
     // Hero
-    heroTitle: 'Sedric Gerve Kouam',
     heroRole: 'Full-Stack Web Developer & AI Engineer',
-    heroSubtitle: 'Full-Stack Developer building modern web applications with Laravel, Vue.js and the TALL stack — with a specialization in Data & Human-AI Interaction (LLMs, Prompt Engineering, HITL).',
+    heroSubtitle: 'I design and build modern web applications, then extend them with AI — RAG systems, AI chatbots, autonomous agents and automated workflows that connect to your own data and act on it.',
     heroLocation: 'Douala, Cameroon',
     heroAvailability: 'Open to remote work worldwide',
     downloadResume: 'Download Resume',
@@ -124,9 +123,8 @@ export const translations = {
     contact: 'Contact',
 
     // Hero
-    heroTitle: 'Sedric Gerve Kouam',
     heroRole: 'Développeur Web Full-Stack & Ingénieur IA',
-    heroSubtitle: "Développeur Full-Stack créant des applications web modernes avec Laravel, Vue.js et la stack TALL — avec une spécialisation en Données & Interaction Humain-IA (LLM, Prompt Engineering, HITL).",
+    heroSubtitle: "Je conçois et construis des applications web modernes, puis je les enrichis avec de l'IA — systèmes RAG, chatbots IA, agents autonomes et workflows automatisés connectés à vos propres données.",
     heroLocation: 'Douala, Cameroun',
     heroAvailability: 'Ouvert au télétravail à l\'international',
     downloadResume: 'Télécharger le CV',

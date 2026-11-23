@@ -4,7 +4,6 @@
     <div class="container">
       <div class="hero-content">
         <p class="role">{{ t('heroRole') }}</p>
-        <h1>{{ t('heroTitle') }}</h1>
 
         <div class="build-line">
           <span class="build-label">{{ t('servicesLabel') }}</span>
@@ -116,13 +115,6 @@ export default {
   color: var(--accent-color);
 }
 
-.hero h1 {
-  color: var(--white);
-  margin-bottom: 1.4rem;
-  font-size: 3.6rem;
-  letter-spacing: -1.5px;
-}
-
 .build-line {
   display: flex;
   align-items: center;
@@ -194,11 +186,11 @@ export default {
 }
 
 .subtitle {
-  font-size: 1.1rem;
-  max-width: 620px;
+  font-size: 1.35rem;
+  max-width: 640px;
   margin: 0 0 1.8rem;
   color: rgba(255, 255, 255, 0.82);
-  line-height: 1.75;
+  line-height: 1.65;
   font-weight: 400;
 }
 
@@ -273,11 +265,6 @@ export default {
     max-width: 100%;
   }
 
-  .hero h1 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-
   .role {
     font-size: 0.9rem;
   }
@@ -288,7 +275,7 @@ export default {
   }
 
   .subtitle {
-    font-size: 0.9rem;
+    font-size: 1.05rem;
     margin-bottom: 1.2rem;
   }
 
@@ -312,12 +299,8 @@ export default {
     min-height: 80vh;
   }
 
-  .hero h1 {
-    font-size: 2.5rem;
-  }
-
   .subtitle {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -327,9 +310,6 @@ export default {
     min-height: 90vh;
   }
 
-  .hero h1 {
-    font-size: 3rem;
-  }
 }
 
 /* Large Screens (1025px+) */
