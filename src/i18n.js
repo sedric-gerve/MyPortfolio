@@ -3,7 +3,6 @@ export const translations = {
     // Navigation
     about: 'About',
     services: 'Services',
-    skills: 'Skills',
     projects: 'Projects',
     contact: 'Contact',
 
@@ -53,27 +52,6 @@ export const translations = {
     factInterestsValue: 'Video games, Hiking',
     profilePhotoAlt: 'Photo of Sedric Gerve Kouam',
 
-    // Skills
-    skillsTitle: 'Skills',
-    techSkillsGroup: 'Technical Skills',
-    aiSkillsGroup: 'AI & Data Skills',
-    frontendDevelopment: 'Frontend Development',
-    frontendDescription: 'Building responsive, interactive user interfaces with the modern JavaScript ecosystem.',
-    backendDevelopment: 'Backend Development',
-    backendDescription: 'Creating scalable server-side applications and REST APIs with Laravel and Node.js.',
-    databaseDesign: 'Database Design',
-    databaseDescription: 'Designing and optimizing relational databases for complex business applications.',
-    devTools: 'Dev Tools & Workflow',
-    devToolsDescription: 'Version control, LLM API integration and a modern developer toolchain.',
-    promptEngineering: 'Prompt Engineering & Fine-Tuning',
-    promptEngineeringDescription: 'Designing and refining complex prompts for LLMs, model evaluation and fine-tuning techniques.',
-    dataLabeling: 'Data Labeling & Annotation',
-    dataLabelingDescription: 'Data labeling and annotation management tailored for AI model training and development.',
-    hitlQa: 'Quality Management & HITL QA',
-    hitlQaDescription: 'Human-in-the-Loop supervision, data quality assessment and validation of AI-driven systems.',
-    analyticalRigor: 'Analytical Rigor',
-    analyticalRigorDescription: 'Scientific analysis and fact-checking rooted in an academic foundation in mathematics.',
-
     // Projects
     projectsTitle: 'Projects',
     projectsIntro: 'Shipped products and systems — not exercises. Each one is live, in use, or built for a real workflow.',
@@ -118,7 +96,6 @@ export const translations = {
     // Navigation
     about: 'À propos',
     services: 'Services',
-    skills: 'Compétences',
     projects: 'Projets',
     contact: 'Contact',
 
@@ -167,27 +144,6 @@ export const translations = {
     factInterestsLabel: 'Centres d\'intérêt',
     factInterestsValue: 'Jeux vidéo, Randonnée',
     profilePhotoAlt: 'Photo de Sedric Gerve Kouam',
-
-    // Skills
-    skillsTitle: 'Compétences',
-    techSkillsGroup: 'Compétences Techniques',
-    aiSkillsGroup: 'Compétences IA & Données',
-    frontendDevelopment: 'Développement Frontend',
-    frontendDescription: "Création d'interfaces utilisateur réactives et interactives avec l'écosystème JavaScript moderne.",
-    backendDevelopment: 'Développement Backend',
-    backendDescription: "Création d'applications côté serveur scalables et d'API REST avec Laravel et Node.js.",
-    databaseDesign: 'Conception de Bases de Données',
-    databaseDescription: "Conception et optimisation de bases de données relationnelles pour des applications métier complexes.",
-    devTools: 'Outils & Workflow',
-    devToolsDescription: "Contrôle de version, intégration d'API LLM et un environnement de développement moderne.",
-    promptEngineering: 'Prompt Engineering & Fine-Tuning',
-    promptEngineeringDescription: "Conception et affinage de prompts complexes pour les LLM, évaluation de modèles et techniques de fine-tuning.",
-    dataLabeling: 'Labellisation & Annotation de Données',
-    dataLabelingDescription: "Gestion de la labellisation et de l'annotation de données pour l'entraînement et le développement de modèles d'IA.",
-    hitlQa: 'Gestion de la Qualité & HITL QA',
-    hitlQaDescription: "Supervision Human-in-the-Loop, évaluation de la qualité des données et validation des systèmes pilotés par l'IA.",
-    analyticalRigor: 'Rigueur Analytique',
-    analyticalRigorDescription: "Analyse scientifique et vérification des faits ancrées dans une formation académique en mathématiques.",
 
     // Projects
     projectsTitle: 'Projets',

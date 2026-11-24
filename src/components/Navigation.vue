@@ -18,7 +18,6 @@
       <ul class="nav-links" :class="{ open: isMenuOpen }">
         <li><a href="#services" @click="closeMenu">{{ t('services') }}</a></li>
         <li><a href="#about" @click="closeMenu">{{ t('about') }}</a></li>
-        <li><a href="#skills" @click="closeMenu">{{ t('skills') }}</a></li>
         <li><a href="#projects" @click="closeMenu">{{ t('projects') }}</a></li>
         <li><a href="#contact" class="cta-button" @click="closeMenu">{{ t('contact') }}</a></li>
         <li class="language-switcher">

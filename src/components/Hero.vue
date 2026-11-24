@@ -69,8 +69,8 @@ export default {
         fr: "Sedric Gerve Kouam | Développeur Full-Stack & Spécialiste IA / Données"
       }
       const descriptions = {
-        en: "Official portfolio of Sedric Gerve Kouam, full-stack web developer specialized in Data & Human-AI Interaction. Discover his services, projects, skills and contact him directly.",
-        fr: "Portfolio officiel de Sedric Gerve Kouam, développeur web full-stack spécialisé en Données & Interaction Humain-IA. Découvrez ses services, projets, compétences et contactez-le directement."
+        en: "Official portfolio of Sedric Gerve Kouam, full-stack web developer specialized in Data & Human-AI Interaction. Discover his services, projects and contact him directly.",
+        fr: "Portfolio officiel de Sedric Gerve Kouam, développeur web full-stack spécialisé en Données & Interaction Humain-IA. Découvrez ses services, projets et contactez-le directement."
       }
 
       setMeta({
