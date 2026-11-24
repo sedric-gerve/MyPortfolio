@@ -4,6 +4,7 @@ export const translations = {
     about: 'About',
     services: 'Services',
     projects: 'Projects',
+    faq: 'FAQ',
     contact: 'Contact',
 
     // Hero
@@ -72,6 +73,23 @@ export const translations = {
     viewProject: 'View Project',
     github: 'GitHub',
 
+    // FAQ
+    faqEyebrow: 'Questions',
+    faqTitle: 'Frequently Asked Questions',
+    faqIntro: 'What people usually ask before we start working together.',
+    faq1Q: 'What services do you offer?',
+    faq1A: 'I design and build full-stack websites and web apps, then extend them with AI — RAG systems that answer from your own data, AI agents and workflow automation, and technical SEO — plus deployment and hosting to take it all live.',
+    faq2Q: 'What is a RAG system, and do I actually need one?',
+    faq2A: "Retrieval-Augmented Generation lets an AI assistant answer questions using your own documents and data instead of guessing. If you have a knowledge base, CRM or support docs that are hard to search, RAG turns that into fast, accurate answers.",
+    faq3Q: 'Can an AI agent really replace manual work in my business?',
+    faq3A: 'For repetitive, rule-based tasks — invoice processing, support triage, data entry — yes. I build agents with human approval built in wherever a decision carries risk, so automation handles the routine while you stay in control of the exceptions.',
+    faq4Q: 'Do you only build AI features, or complete websites too?',
+    faq4A: 'Both, and usually together. Most projects start as a web application I build end-to-end, with AI features layered in only where they genuinely save time rather than added for their own sake.',
+    faq5Q: 'How long does a typical project take?',
+    faq5A: "A focused website or a single automation workflow usually takes 2-4 weeks. Larger web applications or multi-step AI systems take longer — I'll give you a concrete timeline after a short discovery conversation.",
+    faq6Q: 'What happens after launch — do you offer support?',
+    faq6A: "I handle deployment and hosting setup myself, and I'm available afterward for support, fixes and iterations once your project is live.",
+
     // Contact
     contactTitle: 'Get In Touch',
     contactIntro: 'Have a project in mind or just want to say hello? Feel free to reach out!',
@@ -97,6 +115,7 @@ export const translations = {
     about: 'À propos',
     services: 'Services',
     projects: 'Projets',
+    faq: 'FAQ',
     contact: 'Contact',
 
     // Hero
@@ -164,6 +183,23 @@ export const translations = {
     supportAgentDesc: "Workflow n8n avec base de connaissances RAG (PostgreSQL + pgvector, embeddings Voyage AI) qui répond aux emails de support uniquement à partir de la documentation et escalade vers un humain en cas de faible confiance ou de réclamation détectée — chaque décision est journalisée.",
     viewProject: 'Voir le Projet',
     github: 'GitHub',
+
+    // FAQ
+    faqEyebrow: 'Questions',
+    faqTitle: 'Questions Fréquentes',
+    faqIntro: "Les questions qu'on me pose généralement avant de démarrer un projet ensemble.",
+    faq1Q: 'Quels services proposez-vous ?',
+    faq1A: "Je conçois et développe des sites et applications web full-stack, puis je les enrichis avec de l'IA — systèmes RAG qui répondent à partir de vos propres données, agents IA et automatisation de workflows, et SEO technique — jusqu'au déploiement et à la mise en ligne.",
+    faq2Q: "Qu'est-ce qu'un système RAG, et en ai-je vraiment besoin ?",
+    faq2A: "Le Retrieval-Augmented Generation permet à un assistant IA de répondre à partir de vos propres documents et données au lieu d'inventer une réponse. Si vous avez une base de connaissances, un CRM ou une documentation de support difficile à chercher, le RAG en fait des réponses rapides et précises.",
+    faq3Q: 'Un agent IA peut-il vraiment remplacer du travail manuel dans mon entreprise ?',
+    faq3A: "Pour les tâches répétitives et basées sur des règles — traitement de factures, tri du support client, saisie de données — oui. Je construis des agents avec validation humaine intégrée partout où une décision comporte un risque, pour que l'automatisation gère la routine pendant que vous gardez le contrôle des exceptions.",
+    faq4Q: 'Construisez-vous uniquement des fonctionnalités IA, ou des sites complets aussi ?',
+    faq4A: "Les deux, et généralement ensemble. La plupart des projets démarrent comme une application web que je construis de bout en bout, avec des fonctionnalités IA ajoutées seulement là où elles font réellement gagner du temps.",
+    faq5Q: 'Combien de temps dure un projet typique ?',
+    faq5A: "Un site ciblé ou un seul workflow d'automatisation prend généralement 2 à 4 semaines. Les applications web plus grandes ou les systèmes IA en plusieurs étapes prennent plus de temps — je vous donnerai un calendrier concret après un court échange de découverte.",
+    faq6Q: 'Que se passe-t-il après la mise en ligne ? Proposez-vous du support ?',
+    faq6A: "Je m'occupe moi-même du déploiement et de la configuration de l'hébergement, et je reste disponible ensuite pour le support, les corrections et les itérations une fois votre projet en ligne.",
 
     // Contact
     contactTitle: 'Me Contacter',

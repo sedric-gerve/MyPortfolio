@@ -2,9 +2,11 @@
   <div id="app">
     <Navigation />
     <Hero />
+    <ServicesTicker />
     <Services />
     <About />
     <Projects />
+    <Faq />
     <Contact />
     <Footer />
   </div>
@@ -14,9 +16,11 @@
 import { ref, provide, computed, watchEffect } from 'vue'
 import Navigation from './components/Navigation.vue'
 import Hero from './components/Hero.vue'
+import ServicesTicker from './components/ServicesTicker.vue'
 import Services from './components/Services.vue'
 import About from './components/About.vue'
 import Projects from './components/Projects.vue'
+import Faq from './components/Faq.vue'
 import Contact from './components/Contact.vue'
 import Footer from './components/Footer.vue'
 import { useTranslations } from './i18n'
@@ -26,9 +30,11 @@ export default {
   components: {
     Navigation,
     Hero,
+    ServicesTicker,
     Services,
     About,
     Projects,
+    Faq,
     Contact,
     Footer
   },

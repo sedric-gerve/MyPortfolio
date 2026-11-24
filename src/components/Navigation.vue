@@ -19,6 +19,7 @@
         <li><a href="#services" @click="closeMenu">{{ t('services') }}</a></li>
         <li><a href="#about" @click="closeMenu">{{ t('about') }}</a></li>
         <li><a href="#projects" @click="closeMenu">{{ t('projects') }}</a></li>
+        <li><a href="#faq" @click="closeMenu">{{ t('faq') }}</a></li>
         <li><a href="#contact" class="cta-button" @click="closeMenu">{{ t('contact') }}</a></li>
         <li class="language-switcher">
           <button
