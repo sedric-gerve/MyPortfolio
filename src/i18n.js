@@ -23,7 +23,7 @@ export const translations = {
     // Services
     servicesEyebrow: 'What I Do',
     servicesTitle: 'Services',
-    servicesIntro: 'Five ways I can help, from a new site to AI that reads your own data and acts on it.',
+    servicesIntro: 'Five ways I help SMEs, startups and entrepreneurs — from first idea to production — with a new site or AI that reads your own data and acts on it.',
     svcWebName: 'Website & Web App Development',
     svcWebCategory: 'Custom sites, SaaS & web apps',
     svcWebDesc: 'Full-stack websites and web applications built with Laravel, Vue.js and the TALL stack — from first line of code to production, built to scale.',
@@ -134,7 +134,7 @@ export const translations = {
     // Services
     servicesEyebrow: 'Ce Que Je Fais',
     servicesTitle: 'Services',
-    servicesIntro: "Cinq façons de vous aider, d'un nouveau site à une IA qui lit vos propres données et agit dessus.",
+    servicesIntro: "Cinq façons dont j'accompagne PME, startups et entrepreneurs — de l'idée à la mise en production — avec un nouveau site ou une IA qui lit vos propres données et agit dessus.",
     svcWebName: 'Développement de sites et applications web',
     svcWebCategory: 'Sites vitrines, SaaS et applications sur mesure',
     svcWebDesc: "Sites web et applications full-stack construits avec Laravel, Vue.js et la stack TALL — de la première ligne de code à la production, conçus pour évoluer.",
